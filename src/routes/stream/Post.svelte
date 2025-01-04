@@ -54,7 +54,7 @@
 
   <!-- Sub-images -->
   {#if data.subimages}
-    <div class="grid grid-cols-3 gap-4 md:gap-8 lg:gap-12">
+    <div class="grid grid-cols-3 gap-4 mb-10">
       {#each data.subimages as image}
         <div class="col-span-full md:col-span-1">
           <a rel="external" href={images[`../../posts/${image}`]?.default}>
@@ -78,7 +78,6 @@
 
 <style lang="postcss">
   .url-image {
-    max-width: 90%;
-    margin: 3rem auto;
+    margin: 1rem auto;
   }
 </style>
