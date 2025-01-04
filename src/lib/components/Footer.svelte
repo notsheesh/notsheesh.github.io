@@ -1,10 +1,10 @@
 <!-- html -->
 <footer class="layout-md mt-20 text-lg flex flex-col">
-  <div class="row">
+  <!-- <div class="row">
     <span>𝕏</span>
     <hr />
     <a class="link" href="https://x.com/c0mputerist">@c0mputerist</a>
-  </div>
+  </div> -->
   <div class="row">
     <span>GitHub</span>
     <hr />
