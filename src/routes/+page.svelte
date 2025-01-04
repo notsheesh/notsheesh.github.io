@@ -60,7 +60,7 @@
       <p>
         After sunset, I can be found reading anything and everything from the
         back of a shampoo bottle to mushy memoirs. I also love playing the
-        guitar, video games, masala dosa, running and sleeping.
+        guitar, video games, podi masala dosa, running and sleeping.
       </p>
     </div>
   </div>
@@ -122,12 +122,12 @@
   <hr />
   <div class="space-y-5 text-md md:text-lg">
     <p>
-      <em><u>More;</u></em> I was born in Lucknow and brought up around Gurgaon.
-      I spent 4 years in Manipal (half and half on beaches and campus) followed by
-      a year in Bangalore. After this 5 year long sprint of making some of the best
-      memories, mistakes and friends, I decided to take some time off to plan my
-      next sprint. I moved to the US in July '23 and it's been a rollercoaster ever
-      since - but more on that later (:
+      <em><u>More;</u></em> I was born in a small town near Varanasi and brought
+      up around Gurgaon. I spent 4 years in Manipal (half and half on beaches and
+      campus) followed by a year in Bangalore. After this 5 year long sprint of making
+      some of the best memories, mistakes and friends, I decided to take some time
+      off to plan my next sprint. I moved to the US in July '23 and it's been a rollercoaster
+      ever since - but more on that later (:
     </p>
 
     <p>
