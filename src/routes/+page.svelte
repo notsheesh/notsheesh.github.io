@@ -122,12 +122,13 @@
   <hr />
   <div class="space-y-5 text-md md:text-lg">
     <p>
-      <em><u>More;</u></em> I was born in a small town near Varanasi and brought
-      up around Gurgaon, India. I spent 4 years in Manipal (half and half on beaches
-      and campus) followed by a year in Bangalore. After this 5 year long sprint
-      of making some of the best memories, mistakes and friends, I decided to take
-      some time off to plan my next sprint. I moved to the US in July '23 and it's
-      been a rollercoaster ever since - but more on that later (:
+      <em><u>More;</u></em> With ancestral roots in Ayodhya, I was born in a small
+      town near Varanasi and raised in Gurgaon, India. I spent 4 years in Manipal
+      (half and half on beaches and campus) followed by a year in Bangalore. After
+      this 5 year long sprint of making some of the best memories, mistakes and friends,
+      I decided to take some time off to plan my next sprint. I moved to the US in
+      July '23 and it's been a rollercoaster ever since - but more on that later
+      (:
     </p>
 
     <p>
