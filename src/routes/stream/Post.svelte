@@ -52,7 +52,7 @@
     </div>
   {/if}
 
-  <!-- Sub-images -->  
+  <!-- Sub-images -->
   {#if data.subimages}
     <div class="grid grid-cols-3 gap-4 mb-10">
       {#each data.subimages as image}
