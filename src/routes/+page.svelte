@@ -127,8 +127,7 @@
       (half and half on beaches and campus) followed by a year in Bangalore. After
       this 5 year long sprint of making some of the best memories, mistakes and friends,
       I decided to take some time off to plan my next sprint. I moved to the US in
-      July '23 and it's been a rollercoaster ever since - but more on that later
-      (:
+      July '23 and it's been a rollercoaster ever since - but more on that later.
     </p>
 
     <p>
