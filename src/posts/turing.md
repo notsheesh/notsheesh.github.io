@@ -1,5 +1,4 @@
 ---
-title: The Imitation Game
 date:
 image: https://m.media-amazon.com/images/M/MV5BMTc3ZWRhYmYtOGVhZS00NmNkLWJiNzMtN2I1MTJlNWM2NjEyXkEyXkFqcGc@._V1_.jpg
 subimages:

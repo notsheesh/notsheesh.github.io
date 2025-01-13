@@ -1,5 +1,4 @@
 ---
-title: The Man Who Knew Infinity
 date:
 image: https://m.media-amazon.com/images/M/MV5BMzg5NmI3ZDktOGU0Ni00OTI1LWI0NTktNmY0YTBiNjJkMDg0XkEyXkFqcGc@._V1_.jpg
 subimages:
