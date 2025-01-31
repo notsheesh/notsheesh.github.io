@@ -40,11 +40,11 @@
   <!-- Image -->
   {#if data.image}
     <div class="col-span-3 md:col-span-1">
-      <a rel="external" href={images[`../../stream/${data.image}`]?.default}>
+      <a rel="external" href={images[`../../notes/${data.image}`]?.default}>
         <img
           src={isUrl(data.image)
             ? data.image
-            : images[`../../stream/${data.image}`]?.default}
+            : images[`../../notes/${data.image}`]?.default}
           alt="{data.title} preview image"
           class:url-image={isUrl(data.image)}
         />
@@ -57,11 +57,11 @@
     <div class="grid grid-cols-3 gap-4 mb-10">
       {#each data.subimages as image}
         <div class="col-span-full md:col-span-1">
-          <a rel="external" href={images[`../../stream/${image}`]?.default}>
+          <a rel="external" href={images[`../../notes/${image}`]?.default}>
             <img
               src={isUrl(image)
                 ? image
-                : images[`../../stream/${data.image}`]?.default}
+                : images[`../../notes/${data.image}`]?.default}
               alt="{data.title} subimage"
             />
           </a>

@@ -34,7 +34,7 @@
   <span class="neutral">is a</span>
   hardware engineer<span class="neutral">,</span><br />
   researcher<span class="neutral">, and</span><br />
-  human<span class="neutral">.</span>
+  <span class="neutral">(42%) </span>human<span class="neutral">.</span>
 </p>
 
 <div class="layout-md text-md md:text-lg space-y-14">

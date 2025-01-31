@@ -3,8 +3,8 @@
 
   type Link = { name: string; href: string };
   const links: Link[] = [
-    { name: "stream", href: "/stream" }, // TODO
-    // { name: "work", href: "/work" }, // TODO
+    { name: "notes", href: "/notes" },
+    { name: "stream", href: "/stream" },
     // { name: "resume", href: "/resume" }, // TODO
     // { name: "writing", href: "/writing" }, // TODO
   ];
