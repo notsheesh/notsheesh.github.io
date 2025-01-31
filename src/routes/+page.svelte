@@ -52,15 +52,14 @@
       <p>Hi, I’m Shreesh, and I love computers.</p>
 
       <p>
-        I’m primarily interested in computer architecture and design but I also
-        make time to appreciate machine learning, physics and technology
-        businesses.
+        I'm primarily interested in computer architecture and digital design but
+        I also make time to appreciate device physics.
       </p>
 
       <p>
         After sunset, I can be found reading anything and everything from the
         back of a shampoo bottle to mushy memoirs. I also love playing the
-        guitar, video games, podi masala dosa, running and sleeping.
+        guitar, video games, hiking and sleeping.
       </p>
     </div>
   </div>
