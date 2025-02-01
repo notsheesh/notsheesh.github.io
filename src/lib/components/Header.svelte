@@ -4,7 +4,10 @@
   type Link = { name: string; href: string };
   const links: Link[] = [
     { name: "notes", href: "/notes" },
-    { name: "stream", href: "/stream" },
+    {
+      name: "feed",
+      href: "https://tinyurl.com/shreesh-cot",
+    },
     // { name: "resume", href: "/resume" }, // TODO
     // { name: "writing", href: "/writing" }, // TODO
   ];
@@ -52,6 +55,7 @@
     @apply flex items-start text-neutral-500 justify-end space-x-6 text-lg py-0.5;
   }
 
+  /* 
   .page-title {
     @apply font-light;
   }
@@ -64,7 +68,8 @@
     .page-title :first-child {
       @apply hidden;
     }
-  }
+  } 
+  */
 
   @media (max-width: 420px) {
     nav {
