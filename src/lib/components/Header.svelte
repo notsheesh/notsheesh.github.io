@@ -4,10 +4,10 @@
   type Link = { name: string; href: string };
   const links: Link[] = [
     { name: "notes", href: "/notes" },
-    {
-      name: "feed",
-      href: "https://tinyurl.com/sheesh-cot",
-    },
+    // {
+    //   name: "feed",
+    //   href: "https://tinyurl.com/sheesh-cot",
+    // },
     // { name: "resume", href: "/resume" }, // TODO
     // { name: "writing", href: "/writing" }, // TODO
   ];
