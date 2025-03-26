@@ -24,7 +24,7 @@
 
 <Seo
   title="Shreesh Tripathi"
-  description="Hardware engineer, researcher, and human."
+  description="Silicon engineer, programmer, and a researcher."
 />
 
 <p
@@ -32,9 +32,9 @@
   id="eric-is"
 >
   <span class="neutral">is a</span>
-  hardware engineer<span class="neutral">,</span><br />
-  researcher<span class="neutral">, and</span><br />
-  <span class="neutral">(42%) </span>human<span class="neutral">.</span>
+  silicon engineer<span class="neutral">,</span><br />
+  programmer<span class="neutral">, and</span><br />
+  researcher<span class="neutral">.</span>
 </p>
 
 <div class="layout-md text-md md:text-lg space-y-14">
@@ -52,8 +52,8 @@
       <p>Hi, I’m Shreesh, and I love computers.</p>
 
       <p>
-        I'm primarily interested in computer architecture and digital design but
-        I also make time to appreciate device physics.
+        I'm primarily interested in computer architecture and design but I also
+        make time to appreciate the underlying physics and math.
       </p>
 
       <p>
@@ -88,63 +88,19 @@
     <hr />
   {/if}
 
-  <div class="space-y-5 text-md md:text-lg">
-    <p>
-      <em><u>Now;</u></em>
-      I am a graduate student at
-      <em><strong class="text-[#C41230]">Carnegie Mellon University</strong></em
-      >, majoring in Electrical and Computer Engineering. I will be interning
-      with the GPU ASIC team at
-      <em><strong class="text-[#76B900]">Nvidia</strong></em> in Santa Clara, California
-      during the summer of 2025 🏄‍♂️
-    </p>
-    <p>
-      <em><u>Then;</u></em> I graduated from
-      <em
-        ><strong class="text-[#f57025]">Manipal Institute of Technology</strong
-        ></em
-      >
-      with a bachelors in Electronics and Communication Engineering and a minor in
-      Computer Science. I was part of my university’s AI Robotics Team,
-      <a href="https://projectmanas.in/" class="link">Project MANAS</a>, where
-      we worked on a self-driving car and an autonomous robot that won the world
-      grand prize at the
-      <a href="http://www.igvc.org/" class="link"
-        >Intelligent Ground Vehicle Competition</a
-      >
-      in Michigan in 2019. I was also on the founding team of Manipal's
-      <a href="https://ieee-ras-manipal.github.io/Website/" class="link"
-        >IEEE Robotics and Automation Society</a
-      >, and served as the Chairperson for the chapter during 2021 - 2022.
-    </p>
-  </div>
-  <hr />
-  <div class="space-y-5 text-md md:text-lg">
-    <p>
-      <em><u>More;</u></em> With ancestral roots in Ayodhya, I was born in a small
-      town near Varanasi and raised in Gurgaon, India. I spent 4 years in Manipal
-      (half and half on beaches and campus) followed by a year in Bangalore. After
-      this 5 year long sprint of making some of the best memories, mistakes and friends,
-      I decided to take some time off to plan my next sprint. I moved to the US in
-      July '23 and it's been a rollercoaster ever since - but more on that later.
-    </p>
-
-    <p>
-      This is a blog about my big and small wins, and the ride in between. I
-      post about the things I’ve built and the problems I’m solving. I also
-      maintain a commonplace notebook, where I collect things I want to remember
-      ∩ things I don’t mind the internet knowing.
-    </p>
-
-    <p>
-      If you’re looking to hire me, here’s my (<em>perpetually</em> outdated)
-      <a
-        href="https://drive.google.com/file/d/1Ob8k_f1rz_a5aqBFGZoRSuc8xi5qMjxJ/view?usp=drive_link"
-        class="link"><em>résumé</em></a
-      >. If you believe our ideas resonate — or better yet, challenge each
-      other, feel free to reach out to me on any of my socials, I'd love to chat
-      :-)
-    </p>
+  <div class="space-y-2 text-md md:text-lg">
+    <u>Some things I believe in:</u>
+    <ul>
+      <li>• Every second counts and very little matters.</li>
+      <li>• Tools are meant to be mastered not worshipped.</li>
+      <li>• Most things are at least simple, if not easy.</li>
+      <li>• Laws of physics are the only limit.</li>
+      <li>• Everything is a system, and systems resist formalization.</li>
+      <li>• Learning comes from doing, not reading or thinking.</li>
+      <li>• Slow is smooth, smooth is fast.</li>
+      <li>• Everything is made up and there are no prerequisites.</li>
+      <li>• In the end, people are everything.</li>
+    </ul>
   </div>
   <hr />
 </div>
