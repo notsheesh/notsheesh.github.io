@@ -8,7 +8,7 @@
   <div class="row">
     <span>GitHub</span>
     <hr />
-    <a class="link" href="https://github.com/ntr0pie">@ntr0pie</a>
+    <a class="link" href="https://github.com/notsheesh">@notsheesh</a>
   </div>
   <div class="row">
     <span>Email</span>

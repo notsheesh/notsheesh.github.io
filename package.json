@@ -1,8 +1,8 @@
 {
-  "name": "ntr0pie.github.io",
+  "name": "notsheesh.github.io",
   "type": "module",
   "private": true,
-  "homepage": "https://ntr0pie.github.io",
+  "homepage": "https://notsheesh.github.io",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

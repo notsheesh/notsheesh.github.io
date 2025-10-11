@@ -1,4 +1,4 @@
-# ntr0pie
+# notsheesh
 
 Source code for my personal website, hosted on GitHub Pages.
 
@@ -8,8 +8,8 @@ This website is powered by [SvelteKit](https://kit.svelte.dev/) and
 To setup locally:
 
 ```bash
-git clone https://github.com/ntr0pie/ntr0pie.github.io.git
-cd ntr0pie.github.io
+git clone https://github.com/notsheesh/notsheesh.github.io.git
+cd notsheesh.github.io
 npm install
 npm run dev
 ```
