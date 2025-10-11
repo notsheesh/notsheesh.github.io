@@ -34,7 +34,7 @@
   <span class="neutral">is a</span>
   silicon engineer<span class="neutral">,</span><br />
   programmer<span class="neutral">, and</span><br />
-  researcher<span class="neutral">.</span>
+  confused human<span class="neutral">.</span>
 </p>
 
 <div class="layout-md text-md md:text-lg space-y-14">
