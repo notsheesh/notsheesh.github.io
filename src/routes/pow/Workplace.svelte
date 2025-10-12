@@ -30,7 +30,9 @@
   </p>
   {#if !hidden}
     <div class="opacity-85" in:fade|local>
-      <slot />
+      <ul class="list-disc pl-4 marker:text-neutral-400">
+        <slot />
+      </ul>
     </div>
   {/if}
 </div>
