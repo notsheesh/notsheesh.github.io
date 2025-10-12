@@ -165,10 +165,6 @@
 </section>
 
 <style lang="postcss">
-  ul {
-    @apply list-disc pl-7 marker:text-neutral-400;
-  }
-
   .byline {
     @apply font-serif italic;
   }
