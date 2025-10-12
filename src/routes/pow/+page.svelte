@@ -5,7 +5,7 @@
 
 <Seo
   title="Shreesh's Proof of Work"
-  description="is a computer engineer, programmer, and a confused human."
+  description="is a hardware engineer, programmer, and a confused human."
 />
 
 <section class="layout-md py-6">

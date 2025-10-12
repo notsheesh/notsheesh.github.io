@@ -24,7 +24,7 @@
 
 <Seo
   title="Shreesh Tripathi"
-  description="is a computer engineer, programmer, and a confused human."
+  description="is a hardware engineer, programmer, and a confused human."
 />
 
 <p
@@ -32,7 +32,7 @@
   id="eric-is"
 >
   <span class="neutral">is a</span>
-  computer engineer<span class="neutral">,</span><br />
+  hardware engineer<span class="neutral">,</span><br />
   programmer<span class="neutral">, and</span><br />
   <span class="neutral">a</span> confused human<span class="neutral">.</span>
 </p>
