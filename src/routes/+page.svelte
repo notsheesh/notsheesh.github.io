@@ -24,7 +24,7 @@
 
 <Seo
   title="Shreesh Tripathi"
-  description="Silicon engineer, programmer, and a researcher."
+  description="is a computer engineer, programmer, and a confused human."
 />
 
 <p
@@ -32,7 +32,7 @@
   id="eric-is"
 >
   <span class="neutral">is a</span>
-  silicon engineer<span class="neutral">,</span><br />
+  computer engineer<span class="neutral">,</span><br />
   programmer<span class="neutral">, and</span><br />
   <span class="neutral">a</span> confused human<span class="neutral">.</span>
 </p>
@@ -49,18 +49,14 @@
       />
     </div>
     <div class="md:w-2/3 space-y-5">
-      <p>Hi, I’m Shreesh, and I love computers.</p>
-
+      <p>Hello, I’m Shreesh and I love computers.</p>
       <p>
-        I'm primarily interested in computer architecture and design but I also
-        make time to appreciate the underlying physics and math.
+        I'm interested in computer architecture, design and programming. I also
+        love music, reading, chess, poker, video games, tennis, motorsports,
+        walking and sleeping.
       </p>
 
-      <p>
-        After sunset, I can be found reading anything and everything from the
-        back of a shampoo bottle to mushy memoirs. I also love playing the
-        guitar, video games, hiking and sleeping.
-      </p>
+      <p>Hopefully, there will be time for everything.</p>
     </div>
   </div>
   <hr />
@@ -91,13 +87,12 @@
   <div class="space-y-2 text-md md:text-lg">
     <u>Some things I believe in:</u>
     <ul>
-      <li>• Every second counts and very little matters.</li>
+      <li>• Every cycle counts and very little matters.</li>
       <li>• Tools are meant to be mastered not worshipped.</li>
       <li>• Most things are at least simple, if not easy.</li>
       <li>• Laws of physics are the only limit.</li>
       <li>• Everything is a system, and systems resist formalization.</li>
       <li>• Learning comes from doing, not reading or thinking.</li>
-      <li>• Slow is smooth, smooth is fast.</li>
       <li>• Everything is made up and there are no prerequisites.</li>
       <li>• In the end, people are everything.</li>
     </ul>

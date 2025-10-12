@@ -4,12 +4,11 @@
   type Link = { name: string; href: string };
   const links: Link[] = [
     { name: "notes", href: "/notes" },
+    { name: "pow", href: "/pow" },
     // {
     //   name: "feed",
     //   href: "https://tinyurl.com/sheesh-cot",
     // },
-    // { name: "resume", href: "/resume" }, // TODO
-    // { name: "writing", href: "/writing" }, // TODO
   ];
 
   let pageTitle: string | null = null;
