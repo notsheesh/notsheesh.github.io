@@ -17,8 +17,8 @@
   }
 
   $: notesByDate = Object.keys(notes).sort((a, b) => {
-    const dateA = notes[a].date ? new Date(notes[a].date) : new Date(0);
-    const dateB = notes[b].date ? new Date(notes[b].date) : new Date(0);
+    const dateA = notes[a].date ? new Date(notes[a].date).getTime() : 0;
+    const dateB = notes[b].date ? new Date(notes[b].date).getTime() : 0;
     return dateB - dateA;
   });
 </script>
