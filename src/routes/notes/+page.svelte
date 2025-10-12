@@ -16,14 +16,16 @@
     return id.match(/\.\.\/notes\/(.*)\.md$/)?.[1];
   }
 
-  $: notesByDate = Object.keys(notes).sort(
-    (a, b) => notes[b].date - notes[a].date
-  );
+  $: notesByDate = Object.keys(notes).sort((a, b) => {
+    const dateA = notes[a].date ? new Date(notes[a].date) : new Date(0);
+    const dateB = notes[b].date ? new Date(notes[b].date) : new Date(0);
+    return dateB - dateA;
+  });
 </script>
 
 <Seo
-  title="Shreesh Tripathi – Notes"
-  description="Things I want to remember ∩ Things I don’t mind the internet knowing"
+  title="Shreesh's Notes"
+  description="is a computer engineer, programmer, and a confused human."
 />
 
 <section class="layout-md">
