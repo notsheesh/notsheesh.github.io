@@ -92,6 +92,7 @@
       <li>• Most things are at least simple, if not easy.</li>
       <li>• Laws of physics are the only limit.</li>
       <li>• Everything is a system, and systems resist formalization.</li>
+      <li>• How you do anything is how you do everything.</li>
       <li>• Learning comes from doing, not reading or thinking.</li>
       <li>• Everything is made up and there are no prerequisites.</li>
       <li>• In the end, people are everything.</li>
