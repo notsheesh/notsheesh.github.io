@@ -36,18 +36,18 @@
     >
   </div>
   <hr />
-  <p class="m-4">
+  <p class="mt-4 mb-4">
     After much searching, I've settled on the idea that you're born as a
     painting, a complete picture, which is then jigsawed into pieces, shuffled
     and scattered. The rest of your life is about rediscovering those pieces --
     in people, places and moments -- and thus, your true self.
   </p>
-  <p class="indent-4 mb-4">
+  <p class="mb-4">
     This idea permits duality and fits squarely with both: the divine
     benevolence, cosmic order or destiny, and the raw and rather unmystical
     control and agency humans have over their lives.
   </p>
-  <p class="indent-4 mb-4">
+  <p class="mb-4">
     You could think of it as an acknowledgments section, but for a puzzle, that
     is, me -- a thank you to the people who raised me, challenged me, and
     believed in me, the experiences that broke me open and allowed me to put
