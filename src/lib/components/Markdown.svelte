@@ -38,4 +38,12 @@
   .md-output :global(code) {
     @apply text-[95%];
   }
+
+  .md-output :global(ul) {
+    @apply list-disc pl-6 mb-4;
+  }
+
+  .md-output :global(li) {
+    @apply mb-1;
+  }
 </style>

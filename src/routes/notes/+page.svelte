@@ -34,17 +34,17 @@
       Things I want to remember ∩ Things I don’t mind the internet knowing
     </em>
   </p>
-  <hr />
+  <hr class="my-8" />
 </section>
 
 <div class="notes flex flex-col">
   {#each notesByDate as id (id)}
-    <section class="py-10" id={trimName(id)}>
+    <section class="" id={trimName(id)}>
       <div class="mx-auto max-w-[1152px] px-4 sm:px-6">
         <Post data={notes[id]} {images} />
+        <hr class="my-8" />
       </div>
     </section>
-    <hr />
   {/each}
 </div>
 

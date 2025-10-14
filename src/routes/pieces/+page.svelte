@@ -56,17 +56,17 @@
   <p class="mb-4">
     For who I am and what I have to offer, I owe it all to these pieces.
   </p>
-  <hr />
+  <hr class="my-8" />
 </section>
 
 <div class="pieces flex flex-col">
   {#each piecesByDate as id (id)}
-    <section class="py-10" id={trimName(id)}>
+    <section class="" id={trimName(id)}>
       <div class="mx-auto max-w-[1152px] px-4 sm:px-6">
         <Post data={pieces[id]} {images} />
+        <hr class="my-8" />
       </div>
     </section>
-    <hr />
   {/each}
 </div>
 
