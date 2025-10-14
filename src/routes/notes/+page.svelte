@@ -25,7 +25,7 @@
 
 <Seo
   title="Shreesh's Notes"
-  description="is a hardware engineer, programmer, and a confused human."
+  description="is a computer engineer, daydreamer, and a confused human."
 />
 
 <section class="layout-md">

@@ -24,7 +24,7 @@
 
 <Seo
   title="Shreesh Tripathi"
-  description="is a hardware engineer, programmer, and a confused human."
+  description="is a computer engineer, daydreamer, and a confused human."
 />
 
 <p
@@ -32,8 +32,8 @@
   id="eric-is"
 >
   <span class="neutral">is a</span>
-  hardware engineer<span class="neutral">,</span><br />
-  programmer<span class="neutral">, and</span><br />
+  computer engineer<span class="neutral">,</span><br />
+  daydreamer<span class="neutral">, and</span><br />
   <span class="neutral">a</span> confused human<span class="neutral">.</span>
 </p>
 
@@ -51,9 +51,9 @@
     <div class="md:w-2/3 space-y-5">
       <p>Hello, I’m Shreesh and I love computers.</p>
       <p>
-        I'm interested in computer architecture, design and programming. I also
-        love music, reading, chess, poker, video games, tennis, motorsports,
-        walking and sleeping.
+        I'm interested in computer architecture and design. I also love
+        programming, music, reading, chess, poker, movies, video games, tennis,
+        astronomy, motorsports, walking and sleeping.
       </p>
 
       <p>Hopefully, there will be time for everything.</p>
