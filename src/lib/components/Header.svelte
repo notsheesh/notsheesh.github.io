@@ -4,6 +4,7 @@
   type Link = { name: string; href: string };
   const links: Link[] = [
     { name: "notes", href: "/notes" },
+    { name: "pieces", href: "/pieces" },
     { name: "pow", href: "/pow" },
     // {
     //   name: "feed",
