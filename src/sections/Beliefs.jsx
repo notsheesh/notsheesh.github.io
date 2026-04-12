@@ -15,7 +15,7 @@ export default function Beliefs() {
       <ul style={{ paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
         {BELIEFS.map((b, i) => (
           <li key={i} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '0.5em', color: 'var(--text)' }}>
-            <span style={{ color: 'var(--muted)', fontWeight: 700 }}>✳</span>
+            <span style={{ color: 'var(--muted)', fontWeight: 700 }}>{'✳\uFE0E'}</span>
             <span>{b}</span>
           </li>
         ))}
