@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --bg:    #f5efe0;
+  --text:  #5a5048;
+  --muted: #8a7a6a;
+  --line:  #d4c9b0;
+  --link:  #1a4a8a;
+  --hl:    #ffe98a;
+
+  font-family: Arial, Helvetica, system-ui, sans-serif;
+  font-size: clamp(16px, 1.4vw, 22px);
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+::selection { background: var(--hl); }
+
+a { color: var(--link); text-underline-offset: 0.15em; }
+
+section { scroll-margin-top: 24px; }
