@@ -88,8 +88,4 @@ section { scroll-margin-top: 24px; }
     width: 160px !important;
   }
 
-  .name-title {
-    font-size: 1.15rem !important;
-    white-space: nowrap;
-  }
 }

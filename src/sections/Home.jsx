@@ -40,7 +40,7 @@ const underlined = {
 export default function Home() {
   return (
     <>
-      <h1 className="name-title" style={{
+      <h1 style={{
         fontSize: '1.55rem',
         fontWeight: 400,
         letterSpacing: '0.01em',
