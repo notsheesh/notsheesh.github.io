@@ -18,7 +18,7 @@ const INTERESTS = [
   'reading',
   'chess',
   'poker',
-  { word: 'movies', img: 'https://m.media-amazon.com/images/M/MV5BMTk5MzU4NzkxNF5BMl5BanBnXkFtZTgwMTk4ODE0MzE@._V1_FMjpg_UX2048_.jpg' },
+  { word: 'movies', img: 'https://m.media-amazon.com/images/M/MV5BYTg0OTcwYzItOTdhYi00MDA2LTk0NmUtMzA5M2E5NmU5ODM4XkEyXkFqcGc@._V1_.jpg' },
   { word: 'video games', img: 'https://upload.wikimedia.org/wikipedia/en/4/46/Tux_Racer_cover.png' },
   'tennis',
   { word: 'astronomy', img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg' },
