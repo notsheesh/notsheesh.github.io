@@ -2,7 +2,7 @@ const BELIEFS = [
   'Every cycle counts and very little matters.',
   'Tools are meant to be mastered, not worshipped.',
   'Learning comes from doing, not just reading or thinking.',
-  'Simple rules result in complex, intelligent behavior and complex rules result in simple, stupid behavior.',
+  <>Simple rules result in complex, intelligent behavior<br />And complex rules result in simple, stupid behavior.</>,
   'In the end, people are everything.',
 ]
 
@@ -13,8 +13,8 @@ export default function Beliefs() {
         I believe
       </h2>
       <ul style={{ paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {BELIEFS.map(b => (
-          <li key={b} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '0.5em', color: 'var(--text)' }}>
+        {BELIEFS.map((b, i) => (
+          <li key={i} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '0.5em', color: 'var(--text)' }}>
             <span style={{ color: 'var(--muted)', fontWeight: 700 }}>✳</span>
             <span>{b}</span>
           </li>

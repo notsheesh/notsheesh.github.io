@@ -12,21 +12,17 @@ const NAME = [
 ]
 
 const INTERESTS = [
-  { word: 'computer architecture and design', tip: 'What happens between transistors and code. Most people skip this part.' },
-  { word: 'programming', tip: 'Turning vague ideas into precise bugs.' },
-  { word: 'music', tip: 'Mostly film scores and things my Spotify Wrapped is embarrassed by.' },
-  { word: 'reading', tip: 'Mostly non-fiction. Occasionally fiction. Rarely on schedule.' },
-  { word: 'chess', tip: 'Elo rating: enough to be humbled regularly.' },
-  { word: 'poker', tip: "Game theory, psychology, and convincing yourself it's a skill game." },
-  { word: 'movies', tip: 'Will watch anything with a good score and decent cinematography.' },
-  { word: 'video games', tip: "Currently: whatever I can finish before feeling guilty about it." },
-  { word: 'tennis', tip: 'Self-taught. Shoulder injuries pending.' },
-  {
-    word: 'astronomy',
-    tip: "The universe is 13.8 billion years old and I still can't reply to texts on time.",
-    img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg',
-  },
-  { word: 'motorsports', tip: 'F1, MotoGP. Strategy, chaos, and very loud.' },
+  'computer architecture and design',
+  'programming',
+  'music',
+  'reading',
+  'chess',
+  'poker',
+  { word: 'movies', img: 'https://m.media-amazon.com/images/M/MV5BMTk5MzU4NzkxNF5BMl5BanBnXkFtZTgwMTk4ODE0MzE@._V1_FMjpg_UX2048_.jpg' },
+  { word: 'video games', img: 'https://upload.wikimedia.org/wikipedia/en/4/46/Tux_Racer_cover.png' },
+  'tennis',
+  { word: 'astronomy', img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg' },
+  { word: 'cars and planes', tip: 'Anything that goes fast and is loud tbh.', img: 'https://media1.tenor.com/m/uL1odm9xadoAAAAd/looney-tunes-road-runner.gif' },
   {
     word: 'walking',
     tip: 'Underrated. Solves most problems. But only if you have them sketched well in your head. My girlfriend and mom were right — though I forget this every fortnight and rediscover it from first principles.',
@@ -79,21 +75,23 @@ export default function Home() {
       <p>Hi, I'm Shreesh and I love computers.</p>
 
       <p style={{ marginTop: 14 }}>
-        I'm interested in{' '}
-        <PeakTrigger text={INTERESTS[0].tip} style={underlined}>
-          {INTERESTS[0].word}
-        </PeakTrigger>
-        . I also love{' '}
-        {INTERESTS.slice(1).map(({ word, tip, img }, i) => {
+        I'm interested in computer architecture and design. I also love{' '}
+        {INTERESTS.slice(1).map((item, i) => {
           const rest = INTERESTS.slice(1)
           const isLast = i === rest.length - 1
           const isSecondLast = i === rest.length - 2
-          return (
-            <span key={word}>
-              <PeakTrigger text={tip} img={img} style={underlined}>{word}</PeakTrigger>
-              {isLast ? '.' : isSecondLast ? ' and ' : ', '}
-            </span>
-          )
+          const word = typeof item === 'string' ? item : item.word
+          const suffix = isLast ? '.' : isSecondLast ? ' and ' : ', '
+
+          if (typeof item === 'object' && (item.tip || item.img)) {
+            return (
+              <span key={word}>
+                <PeakTrigger text={item.tip || ''} img={item.img} style={underlined}>{word}</PeakTrigger>
+                {suffix}
+              </span>
+            )
+          }
+          return <span key={word}>{word}{suffix}</span>
         })}
       </p>
 
