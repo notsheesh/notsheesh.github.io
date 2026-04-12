@@ -24,3 +24,72 @@ section { scroll-margin-top: 24px; }
 @keyframes peak-spin {
   to { transform: rotate(360deg); }
 }
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  padding: 110px 36px 72px 80px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* --- Hamburger (hidden on desktop) --- */
+.mob-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 400;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .mob-btn {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 72px 32px 40px 32px;
+    background: var(--bg);
+    border-right: 1px solid var(--line);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 300;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    padding: 48px 24px 100vh 24px !important;
+  }
+
+  .profile-photo {
+    width: 160px !important;
+  }
+
+  .name-title {
+    font-size: 1.15rem !important;
+    white-space: nowrap;
+  }
+}

@@ -40,7 +40,7 @@ const underlined = {
 export default function Home() {
   return (
     <>
-      <h1 style={{
+      <h1 className="name-title" style={{
         fontSize: '1.55rem',
         fontWeight: 400,
         letterSpacing: '0.01em',
@@ -61,6 +61,7 @@ export default function Home() {
       <img
         src="/assets/shreesh_picture_square.jpg"
         alt="Shreesh Tripathi"
+        className="profile-photo"
         style={{
           display: 'block',
           width: 280,

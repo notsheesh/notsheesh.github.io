@@ -4,9 +4,9 @@ const NAV = [
   { href: '#',          label: 'Home' },
   { href: '#beliefs',   label: 'I believe' },
   { href: '#now',       label: 'Then & Now' },
-  { href: '#pieces',    label: 'Jigsaw Pieces' },
-  { href: '#notebook',  label: 'Notebook' },
-  { href: '#bookshelf', label: 'Bookshelf' },
+  // { href: '#pieces',    label: 'Jigsaw Pieces' },
+  // { href: '#notebook',  label: 'Notebook' },
+  // { href: '#bookshelf', label: 'Bookshelf' },
 ]
 
 export default function Sidebar() {
@@ -26,6 +26,13 @@ export default function Sidebar() {
     return () => window.removeEventListener('scroll', updateActive)
   }, [])
 
+  // Close drawer on resize to desktop
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth > 768) setOpen(false) }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   const linkStyle = (id) => ({
     color: active === id ? 'var(--text)' : 'var(--muted)',
     fontWeight: active === id ? 700 : 400,
@@ -37,22 +44,10 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile hamburger */}
+      {/* Hamburger button — shown on mobile via CSS */}
       <button
-        onClick={() => setOpen(o => !o)}
-        style={{
-          display: 'none',
-          position: 'fixed', top: 16, right: 16,
-          zIndex: 400,
-          width: 36, height: 36,
-          alignItems: 'center', justifyContent: 'center',
-          background: 'var(--bg)',
-          border: '1px solid var(--line)',
-          cursor: 'pointer',
-          fontSize: '1.2rem',
-          color: 'var(--muted)',
-        }}
         className="mob-btn"
+        onClick={() => setOpen(o => !o)}
         aria-label="Toggle menu"
       >
         {open ? '✕' : '☰'}
@@ -70,20 +65,8 @@ export default function Sidebar() {
         />
       )}
 
-      {/* Sidebar */}
-      <nav style={{
-        width: 200,
-        flexShrink: 0,
-        padding: '110px 36px 72px 80px',
-        position: 'sticky',
-        top: 0,
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 4,
-      }}
-        className="sidebar"
-      >
+      {/* Sidebar / Drawer */}
+      <nav className={`sidebar${open ? ' open' : ''}`}>
         {NAV.map(({ href, label }) => {
           const id = href === '#' ? '' : href.slice(1)
           return (

@@ -39,7 +39,7 @@ export default function ThenAndNow() {
         Rochester was cold so I transferred out to{' '}
         <span style={hl('cmu')}>Carnegie Mellon University</span>{' '}
         to pursue an M.S. in Electrical and Computer Engineering.
-        At CMU, I worked with John Paul Shen and his PhD student Prabhu Vellaisamy
+        At CMU, I worked with Professor John Paul Shen and his PhD student Prabhu Vellaisamy
         at the{' '}
         <PeakTrigger
           text="Profiling gemm kernels because there's no free launch*"
