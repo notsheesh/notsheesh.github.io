@@ -10,7 +10,7 @@ export default function App() {
     <PeakProvider>
       <div className="max-w-[1100px] mx-auto flex min-h-screen">
         <Sidebar />
-        <main style={{ flex: 1, minWidth: 0, padding: '72px 60px 100vh 40px', maxWidth: 820 }}>
+        <main className="main-content" style={{ flex: 1, minWidth: 0, padding: '72px 60px 100vh 40px', maxWidth: 820 }}>
           <Home />
           <hr style={{ border: 'none', borderTop: '1px solid var(--line)', margin: '48px 0' }} />
           <Beliefs />
