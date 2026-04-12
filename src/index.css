@@ -20,3 +20,7 @@
 a { color: var(--link); text-underline-offset: 0.15em; }
 
 section { scroll-margin-top: 24px; }
+
+@keyframes peak-spin {
+  to { transform: rotate(360deg); }
+}

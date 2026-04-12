@@ -29,7 +29,7 @@ const INTERESTS = [
   { word: 'motorsports', tip: 'F1, MotoGP. Strategy, chaos, and very loud.' },
   {
     word: 'walking',
-    tip: 'Underrated. Solves most problems.<br>But only if you have them sketched well in your head. My girlfriend and mom were right.',
+    tip: 'Underrated. Solves most problems. But only if you have them sketched well in your head. My girlfriend and mom were right — though I forget this every fortnight and rediscover it from first principles.',
     img: 'https://c.tenor.com/N4CS9Sjw_1IAAAAd/tenor.gif',
   },
   { word: 'sleeping', tip: "8 hours minimum or I'm not responsible for my code. ¯\\_(ツ)_/¯" },
