@@ -1,5 +1,22 @@
 import { useState, useEffect } from 'react'
 
+function useDarkMode() {
+  const [dark, setDark] = useState(() => {
+    const stored = localStorage.getItem('theme')
+    if (stored) return stored === 'dark'
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  })
+
+  useEffect(() => {
+    const root = document.documentElement
+    if (dark) { root.classList.add('dark'); root.classList.remove('light') }
+    else       { root.classList.add('light'); root.classList.remove('dark') }
+    localStorage.setItem('theme', dark ? 'dark' : 'light')
+  }, [dark])
+
+  return [dark, setDark]
+}
+
 const NAV = [
   { href: '#',          label: 'Home' },
   { href: '#beliefs',   label: 'I believe' },
@@ -12,6 +29,7 @@ const NAV = [
 export default function Sidebar() {
   const [active, setActive] = useState('')
   const [open, setOpen] = useState(false)
+  const [dark, setDark] = useDarkMode()
 
   useEffect(() => {
     const updateActive = () => {
@@ -26,7 +44,6 @@ export default function Sidebar() {
     return () => window.removeEventListener('scroll', updateActive)
   }, [])
 
-  // Close drawer on resize to desktop
   useEffect(() => {
     const onResize = () => { if (window.innerWidth > 768) setOpen(false) }
     window.addEventListener('resize', onResize)
@@ -44,7 +61,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Hamburger button — shown on mobile via CSS */}
       <button
         className="mob-btn"
         onClick={() => setOpen(o => !o)}
@@ -53,33 +69,39 @@ export default function Sidebar() {
         {open ? '✕' : '☰'}
       </button>
 
-      {/* Overlay */}
       {open && (
         <div
           onClick={() => setOpen(false)}
-          style={{
-            position: 'fixed', inset: 0,
-            background: 'rgba(0,0,0,0.25)',
-            zIndex: 200,
-          }}
+          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.25)', zIndex: 200 }}
         />
       )}
 
-      {/* Sidebar / Drawer */}
       <nav className={`sidebar${open ? ' open' : ''}`}>
         {NAV.map(({ href, label }) => {
           const id = href === '#' ? '' : href.slice(1)
           return (
-            <a
-              key={href}
-              href={href}
-              style={linkStyle(id)}
-              onClick={() => setOpen(false)}
-            >
+            <a key={href} href={href} style={linkStyle(id)} onClick={() => setOpen(false)}>
               {label}
             </a>
           )
         })}
+
+        <button
+          onClick={() => setDark(d => !d)}
+          style={{
+            marginTop: 'auto',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: 'var(--muted)',
+            fontSize: '1.1rem',
+            padding: 0,
+            textAlign: 'left',
+          }}
+          title={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          {dark ? '☀️' : '🌙'}
+        </button>
       </nav>
     </>
   )
