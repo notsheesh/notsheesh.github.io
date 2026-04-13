@@ -15,6 +15,26 @@
   background: var(--bg);
 }
 
+.dark {
+  --bg:    #1c1814;
+  --text:  #e8dcc8;
+  --muted: #9a8a78;
+  --line:  #3a3028;
+  --link:  #7aaddb;
+  --hl:    #5a4010;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --bg:    #1c1814;
+    --text:  #e8dcc8;
+    --muted: #9a8a78;
+    --line:  #3a3028;
+    --link:  #7aaddb;
+    --hl:    #5a4010;
+  }
+}
+
 ::selection { background: var(--hl); }
 
 a { color: var(--link); text-underline-offset: 0.15em; }
