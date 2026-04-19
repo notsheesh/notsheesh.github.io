@@ -12,23 +12,21 @@ const NAME = [
 ]
 
 const INTERESTS = [
-  'computer architecture and design',
-  'programming',
-  'music',
+  'computer architecture and programming',
+  { word: 'music', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Beatles_Abbey_Road_album_cover.jpg' },
   'reading',
-  'chess',
-  'poker',
   { word: 'movies', img: 'https://m.media-amazon.com/images/M/MV5BYTg0OTcwYzItOTdhYi00MDA2LTk0NmUtMzA5M2E5NmU5ODM4XkEyXkFqcGc@._V1_.jpg' },
   { word: 'video games', img: 'https://upload.wikimedia.org/wikipedia/en/4/46/Tux_Racer_cover.png' },
   'tennis',
   { word: 'astronomy', img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg' },
-  { word: 'cars and planes', tip: 'Anything that goes fast and is loud tbh.', img: 'https://media1.tenor.com/m/uL1odm9xadoAAAAd/looney-tunes-road-runner.gif' },
+  { word: 'cars', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Porsche_911E_ca_1969.jpg' },
+  { word: 'planes', img: 'https://wallpapercave.com/wp/fPkmoiS.jpg' },
   {
     word: 'walking',
     tip: 'Underrated. Solves most problems. But only if you have them sketched well in your head. My girlfriend and mom were right — though I forget this every fortnight and rediscover it from first principles.',
     img: 'https://c.tenor.com/N4CS9Sjw_1IAAAAd/tenor.gif',
   },
-  { word: 'sleeping', tip: "8 hours minimum or I'm not responsible for my code. ¯\\_(ツ)_/¯" },
+  { word: 'sleeping', tip: "8 hours minimum or I'm not responsible for my code. ¯\\_(ツ)_/¯", img: 'https://imgs.xkcd.com/comics/cant_sleep.png' },
 ]
 
 const underlined = {
@@ -73,10 +71,10 @@ export default function Home() {
         onMouseLeave={e => Object.assign(e.target.style, { transform: '', boxShadow: '' })}
       />
 
-      <p>Hi, I'm Shreesh and I love computers.</p>
+      <p>Hi, I'm Shreesh.</p>
 
       <p style={{ marginTop: 14 }}>
-        I'm interested in computer architecture and design. I also love{' '}
+        I love computer architecture and programming. I also love{' '}
         {INTERESTS.slice(1).map((item, i) => {
           const rest = INTERESTS.slice(1)
           const isLast = i === rest.length - 1
