@@ -21,6 +21,7 @@ const NAV = [
   { href: '#',          label: 'Home' },
   { href: '#beliefs',   label: 'Beliefs' },
   { href: '#now',       label: 'Then & Now' },
+  { href: '#notes',     label: 'Notes' },
   // { href: '#pieces',    label: 'Jigsaw Pieces' },
   // { href: '#notebook',  label: 'Notebook' },
   // { href: '#bookshelf', label: 'Bookshelf' },

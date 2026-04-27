@@ -3,6 +3,7 @@ const BELIEFS = [
   'Tools are meant to be mastered, not worshipped.',
   'One must do things well, even if that means choosing less.',
   'Learning comes from doing, not reading, watching, listening or thinking.',
+  'There are no bad students, only impatient teachers.',
   'Slow is smooth, smooth is fast.',
   <>Simple rules result in complex, intelligent behavior<br />And complex rules result in simple, stupid behavior.</>,
   'You can do more than you think. The laws of physics are the only limit.',
