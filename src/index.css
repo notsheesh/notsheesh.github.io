@@ -41,6 +41,132 @@ a { color: var(--link); text-underline-offset: 0.15em; }
 
 section { scroll-margin-top: 24px; }
 
+.annotation-star {
+  color: var(--muted);
+  font-size: 0.7em;
+  font-style: normal;
+  line-height: 1;
+  margin-left: 0.14em;
+  vertical-align: super;
+}
+
+.section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.notes-intro {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-post {
+  padding: 0;
+}
+
+.note-post + .note-post {
+  margin-top: 18px;
+}
+
+.note-post:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 50%;
+  max-width: 360px;
+  margin: 12px auto 0;
+  border-top: 1px solid var(--line);
+  opacity: 0.72;
+}
+
+.note-header {
+  margin-bottom: 10px;
+}
+
+.note-header h3 {
+  display: inline;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.note-image-link {
+  display: block;
+  width: 100%;
+  margin: 16px 0 18px;
+}
+
+.note-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.note-subimages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.note-subimages .note-image-link {
+  width: 100%;
+  margin: 0;
+}
+
+.note-subimages .note-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: 100%;
+  object-fit: cover;
+}
+
+.md-output p {
+  margin-bottom: 1rem;
+}
+
+.md-output p:last-child {
+  margin-bottom: 0;
+}
+
+.md-output strong {
+  font-weight: 600;
+}
+
+.md-output code {
+  font-size: 95%;
+}
+
+.md-output ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.md-output li {
+  margin-bottom: 0.25rem;
+}
+
+.md-output blockquote {
+  border-left: 2px solid var(--line);
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
 @keyframes peak-spin {
   to { transform: rotate(360deg); }
 }
@@ -106,6 +232,16 @@ section { scroll-margin-top: 24px; }
 
   .profile-photo {
     width: 160px !important;
+  }
+
+  .note-subimages {
+    grid-template-columns: 1fr;
+  }
+
+  .note-subimages .note-image {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
   }
 
 }

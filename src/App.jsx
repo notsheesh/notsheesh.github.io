@@ -3,6 +3,7 @@ import { PeakProvider } from './components/Peak'
 import Sidebar from './components/Sidebar'
 import Home from './sections/Home'
 import Beliefs from './sections/Beliefs'
+import Notes from './sections/Notes'
 import ThenAndNow from './sections/ThenAndNow'
 
 export default function App() {
@@ -16,6 +17,8 @@ export default function App() {
           <Beliefs />
           <hr style={{ border: 'none', borderTop: '1px solid var(--line)', margin: '48px 0' }} />
           <ThenAndNow />
+          <hr style={{ border: 'none', borderTop: '1px solid var(--line)', margin: '48px 0' }} />
+          <Notes />
         </main>
       </div>
     </PeakProvider>

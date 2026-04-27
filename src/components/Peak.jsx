@@ -80,7 +80,9 @@ function computePos(el, rect) {
   const vpW = window.innerWidth
   const vpH = window.innerHeight
 
+  const triggerMidX = rect.left + rect.width / 2
   let left = rect.left
+  if (triggerMidX - left < 12) left = triggerMidX - 12
   let top = rect.bottom + GAP + ARROW
   let above = false
 
@@ -93,7 +95,6 @@ function computePos(el, rect) {
   // if tooltip is wider than viewport, pin to left edge and let CSS cap the width
   if (w > vpW - 16) left = 8
 
-  const triggerMidX = rect.left + rect.width / 2
   const arrowLeft = Math.min(Math.max(triggerMidX - left, 12), w - 12)
 
   return { left, top, above, arrowLeft }
@@ -154,11 +155,12 @@ function PeakFloat({ tip }) {
         color: '#111',
         overflow: 'visible',
         zIndex: 100,
-        pointerEvents: 'none',
+        pointerEvents: visible ? 'auto' : 'none',
         opacity: visible ? 1 : 0,
         visibility: visible ? 'visible' : 'hidden',
         transition: 'opacity 0.12s, visibility 0.12s',
       }}
+      onClick={e => e.stopPropagation()}
     >
       <div style={mkArrow(pos.above, false)} />
       <div style={mkArrow(pos.above, true)} />

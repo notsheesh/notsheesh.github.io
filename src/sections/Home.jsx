@@ -56,21 +56,6 @@ export default function Home() {
         ))}
       </h1>
 
-      <img
-        src="/assets/shreesh_picture_square.jpg"
-        alt="Shreesh Tripathi"
-        className="profile-photo"
-        style={{
-          display: 'block',
-          width: 280,
-          height: 'auto',
-          marginBottom: 24,
-          transition: 'transform 150ms ease, box-shadow 150ms ease',
-        }}
-        onMouseEnter={e => Object.assign(e.target.style, { transform: 'translate(-5px,-5px)', boxShadow: '8px 8px 0 #111' })}
-        onMouseLeave={e => Object.assign(e.target.style, { transform: '', boxShadow: '' })}
-      />
-
       <p>Hi, I'm Shreesh.</p>
 
       <p style={{ marginTop: 14 }}>
@@ -94,7 +79,15 @@ export default function Home() {
         })}
       </p>
 
-      <p style={{ marginTop: 14 }}>Hopefully, there will be time for everything.</p>
+      <p style={{ marginTop: 14 }}>
+        Hopefully, there will be time for everything.
+        <PeakTrigger
+          text={'Gokul Puthumanaillam<br><a rel="external noopener noreferrer" target="_blank" href="https://gokulp01.github.io/">gokulp01.github.io</a>'}
+          className="annotation-star"
+        >
+          {'✳\uFE0E'}
+        </PeakTrigger>
+      </p>
     </>
   )
 }
