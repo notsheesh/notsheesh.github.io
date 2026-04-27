@@ -14,10 +14,10 @@ const NAME = [
 const INTERESTS = [
   'computer architecture and programming',
   { word: 'music', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Beatles_Abbey_Road_album_cover.jpg' },
-  'reading',
+  { word: 'reading', img: 'https://m.media-amazon.com/images/I/719g0hOCp8L._SL1500_.jpg' },
   { word: 'movies', img: 'https://m.media-amazon.com/images/M/MV5BYTg0OTcwYzItOTdhYi00MDA2LTk0NmUtMzA5M2E5NmU5ODM4XkEyXkFqcGc@._V1_.jpg' },
   { word: 'video games', img: 'https://upload.wikimedia.org/wikipedia/en/4/46/Tux_Racer_cover.png' },
-  'tennis',
+  { word: 'tennis', img: 'https://i1.sndcdn.com/artworks-hHQ3FmyEB9bIO2qJ-MataYA-t500x500.jpg' },
   { word: 'astronomy', img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg' },
   { word: 'cars', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Porsche_911E_ca_1969.jpg' },
   { word: 'planes', img: 'https://wallpapercave.com/wp/fPkmoiS.jpg' },
@@ -82,7 +82,7 @@ export default function Home() {
       <p style={{ marginTop: 14 }}>
         Hopefully, there will be time for everything.
         <PeakTrigger
-          text={'Gokul Puthumanaillam<br><a rel="external noopener noreferrer" target="_blank" href="https://gokulp01.github.io/">gokulp01.github.io</a>'}
+          text={'Gokul P<br><a rel="external noopener noreferrer" target="_blank" href="https://gokulp01.github.io/">gokulp01.github.io</a>'}
           className="annotation-star"
         >
           {'✳\uFE0E'}
