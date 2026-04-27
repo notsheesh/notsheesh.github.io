@@ -1,14 +1,19 @@
+import { PeakTrigger } from '../components/Peak'
+
+const GOVIND_TIP = 'Govind<br><a rel="external noopener noreferrer" target="_blank" href="https://x.com/DeepknowledgeU">x.com/DeepknowledgeU</a>'
+
 const BELIEFS = [
   'Every cycle counts and very little matters.',
+  'Everything is made up and there are no prerequisites.',
   'Tools are meant to be mastered, not worshipped.',
-  'One must do things well, even if that means choosing less.',
-  'Learning comes from doing, not reading, watching, listening or thinking.',
-  'There are no bad students, only impatient teachers.',
-  'Slow is smooth, smooth is fast.',
+  <>
+    Learning comes from doing, not reading, watching, listening or thinking.
+    <PeakTrigger text={GOVIND_TIP} className="annotation-star">
+      {'✳\uFE0E'}
+    </PeakTrigger>
+  </>,
   <>Simple rules result in complex, intelligent behavior<br />And complex rules result in simple, stupid behavior.</>,
   'You can do more than you think. The laws of physics are the only limit.',
-  'Courage is shorter in supply than genius.',
-  "There is no secret ingredient. It's just you.",
   'In the end, people are everything.',
 ]
 
