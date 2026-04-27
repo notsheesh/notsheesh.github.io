@@ -17,6 +17,22 @@ function useDarkMode() {
   return [dark, setDark]
 }
 
+function useFontMode() {
+  const [serif, setSerif] = useState(() => {
+    const stored = localStorage.getItem('font')
+    return stored ? stored === 'serif' : true
+  })
+
+  useEffect(() => {
+    const root = document.documentElement
+    root.classList.toggle('font-serif-mode', serif)
+    root.classList.toggle('font-sans-mode', !serif)
+    localStorage.setItem('font', serif ? 'serif' : 'sans')
+  }, [serif])
+
+  return [serif, setSerif]
+}
+
 const NAV = [
   { href: '#',          label: 'Home' },
   { href: '#beliefs',   label: 'Beliefs' },
@@ -31,6 +47,7 @@ export default function Sidebar() {
   const [active, setActive] = useState('')
   const [open, setOpen] = useState(false)
   const [dark, setDark] = useDarkMode()
+  const [serif, setSerif] = useFontMode()
 
   useEffect(() => {
     const updateActive = () => {
@@ -62,18 +79,9 @@ export default function Sidebar() {
 
   const toggleButton = (
     <button
+      className="sidebar-icon-button"
       onClick={() => setDark(d => !d)}
       title={dark ? 'Switch to light mode' : 'Switch to dark mode'}
-      style={{
-        width: 20, height: 20,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        background: 'transparent',
-        border: 'none',
-        padding: 0,
-        marginBottom: 12,
-        cursor: 'pointer',
-        color: 'var(--muted)',
-      }}
     >
       {dark ? (
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -84,6 +92,19 @@ export default function Sidebar() {
           <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
         </svg>
       )}
+    </button>
+  )
+
+  const fontButton = (
+    <button
+      className="sidebar-icon-button"
+      onClick={() => setSerif(s => !s)}
+      title={serif ? 'Switch to sans serif font' : 'Switch to vintage serif font'}
+      aria-label={serif ? 'Switch to sans serif font' : 'Switch to vintage serif font'}
+    >
+      <span className={serif ? 'font-toggle-icon sans' : 'font-toggle-icon serif'}>
+        Aa
+      </span>
     </button>
   )
 
@@ -106,7 +127,10 @@ export default function Sidebar() {
       )}
 
       <nav className={`sidebar${open ? ' open' : ''}`}>
-        {toggleButton}
+        <div className="sidebar-controls">
+          {toggleButton}
+          {fontButton}
+        </div>
         {NAV.map(({ href, label }) => {
           const id = href === '#' ? '' : href.slice(1)
           return (
