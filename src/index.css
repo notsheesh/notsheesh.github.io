@@ -7,12 +7,28 @@
   --line:  #d4c9b0;
   --link:  #1a4a8a;
   --hl:    #ffe98a;
+  --font-serif: "IM Fell English", Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, system-ui, sans-serif;
+  --serif-font-size: clamp(17px, 1.48vw, 23px);
+  --sans-font-size: clamp(16px, 1.4vw, 22px);
+  --site-font: var(--font-serif);
+  --site-font-size: var(--serif-font-size);
 
-  font-family: Arial, Helvetica, system-ui, sans-serif;
-  font-size: clamp(16px, 1.4vw, 22px);
+  font-family: var(--site-font);
+  font-size: var(--site-font-size);
   line-height: 1.7;
   color: var(--text);
   background: var(--bg);
+}
+
+.font-serif-mode {
+  --site-font: var(--font-serif);
+  --site-font-size: var(--serif-font-size);
+}
+
+.font-sans-mode {
+  --site-font: var(--font-sans);
+  --site-font-size: var(--sans-font-size);
 }
 
 .dark {
@@ -60,9 +76,14 @@ section { scroll-margin-top: 24px; }
   text-decoration-thickness: 1px;
 }
 
+.notes-section {
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+
 .notes-intro {
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .notes-list {
@@ -75,17 +96,25 @@ section { scroll-margin-top: 24px; }
 }
 
 .note-post + .note-post {
-  margin-top: 18px;
+  margin-top: 0;
 }
 
-.note-post:not(:last-child)::after {
-  content: "";
+.note-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.72em;
+  margin: 1.55rem 0 1.9rem;
+  color: var(--text);
+  font-family: var(--site-font);
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.92;
+}
+
+.note-separator span {
   display: block;
-  width: 50%;
-  max-width: 360px;
-  margin: 12px auto 0;
-  border-top: 1px solid var(--line);
-  opacity: 0.72;
 }
 
 .note-header {
@@ -182,6 +211,45 @@ section { scroll-margin-top: 24px; }
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.sidebar-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.sidebar-icon-button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.sidebar-icon-button:hover {
+  color: var(--text);
+}
+
+.font-toggle-icon {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.font-toggle-icon.serif {
+  font-family: var(--font-serif);
+}
+
+.font-toggle-icon.sans {
+  font-family: var(--font-sans);
 }
 
 /* --- Hamburger (hidden on desktop) --- */

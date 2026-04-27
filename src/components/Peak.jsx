@@ -149,7 +149,7 @@ function PeakFloat({ tip }) {
         background: '#ffffcc',
         border: '1px solid #111',
         boxShadow: '4px 4px 0 #111',
-        fontFamily: 'system-ui, Arial, Helvetica, sans-serif',
+        fontFamily: 'var(--site-font)',
         fontSize: '0.8rem',
         lineHeight: 1.4,
         color: '#111',
