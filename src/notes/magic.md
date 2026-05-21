@@ -1,5 +1,4 @@
 ---
-image: https://assets.teenvogue.com/photos/5e6a518a405a8b00082cf2b0/16:9/w_2240,c_limit/MSDPEPA_EC005.jpg
 date: 2025-10-11
 ---
 
