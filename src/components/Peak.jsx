@@ -11,25 +11,25 @@ const IFRAME_REAL_W = Math.round(IFRAME_W / IFRAME_SCALE)  // ~1158px
 const IFRAME_REAL_H = Math.round(IFRAME_H / IFRAME_SCALE)  // ~684px
 
 export function PeakProvider({ children }) {
-  const [tip, setTip] = useState({ visible: false, text: '', img: null, iframe: null, rect: null })
+  const [tip, setTip] = useState({ visible: false, text: '', img: null, imgAlt: '', iframe: null, rect: null })
   const pinnedEl = useRef(null)
 
-  const show = useCallback((el, text, img, iframe) => {
+  const show = useCallback((el, text, img, iframe, imgAlt) => {
     const r = (el.getClientRects()[0]) ?? el.getBoundingClientRect()
-    setTip({ visible: true, text, img, iframe, rect: { left: r.left, right: r.right, top: r.top, bottom: r.bottom, width: r.width } })
+    setTip({ visible: true, text, img, imgAlt: imgAlt || '', iframe, rect: { left: r.left, right: r.right, top: r.top, bottom: r.bottom, width: r.width } })
   }, [])
 
   const hide = useCallback((el) => {
     if (pinnedEl.current !== el) setTip(t => ({ ...t, visible: false }))
   }, [])
 
-  const toggle = useCallback((el, text, img, iframe) => {
+  const toggle = useCallback((el, text, img, iframe, imgAlt) => {
     if (pinnedEl.current === el) {
       pinnedEl.current = null
       setTip(t => ({ ...t, visible: false }))
     } else {
       pinnedEl.current = el
-      show(el, text, img, iframe)
+      show(el, text, img, iframe, imgAlt)
     }
   }, [show])
 
@@ -101,7 +101,7 @@ function computePos(el, rect) {
 }
 
 function PeakFloat({ tip }) {
-  const { visible, text, img, iframe, rect } = tip
+  const { visible, text, img, imgAlt, iframe, rect } = tip
   const floatRef = useRef(null)
   const [imgLoaded, setImgLoaded] = useState(false)
   const [imgError, setImgError] = useState(false)
@@ -170,7 +170,7 @@ function PeakFloat({ tip }) {
           {!imgLoaded && <RetroLoader />}
           <img
             src={img}
-            alt=""
+            alt={imgAlt}
             style={{ display: imgLoaded ? 'block' : 'none', width: '100%', height: 'auto' }}
             onLoad={() => setImgLoaded(true)}
             onError={() => setImgError(true)}
@@ -215,7 +215,7 @@ export function usePeak() {
   return useContext(PeakCtx)
 }
 
-export function PeakTrigger({ text, img, iframe, children, style, className }) {
+export function PeakTrigger({ text, img, imgAlt, iframe, children, style, className }) {
   const { show, hide, toggle } = usePeak()
   const ref = useRef(null)
 
@@ -224,9 +224,9 @@ export function PeakTrigger({ text, img, iframe, children, style, className }) {
       ref={ref}
       className={className}
       style={{ cursor: 'pointer', ...style }}
-      onMouseEnter={() => show(ref.current, text, img, iframe)}
+      onMouseEnter={() => show(ref.current, text, img, iframe, imgAlt)}
       onMouseLeave={() => hide(ref.current)}
-      onClick={e => { e.stopPropagation(); toggle(ref.current, text, img, iframe) }}
+      onClick={e => { e.stopPropagation(); toggle(ref.current, text, img, iframe, imgAlt) }}
     >
       {children}
     </span>

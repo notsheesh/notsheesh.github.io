@@ -43,13 +43,13 @@ function Markdown({ source }) {
   return <div className="md-output" dangerouslySetInnerHTML={{ __html: html }} />
 }
 
-function NoteImage({ src, title }) {
+function NoteImage({ src, alt }) {
   return (
     <a className="note-image-link" rel="external" href={src}>
       <img
         className="note-image"
         src={src}
-        alt={title ? `${title} preview image` : 'Note preview image'}
+        alt={alt || 'Image accompanying this note'}
         decoding="async"
       />
     </a>
@@ -75,7 +75,7 @@ export default function Notes() {
           Things I want to remember ∩ Things I don't mind the internet knowing
           <PeakTrigger
             text={'<a rel="external noopener noreferrer" target="_blank" href="https://squadrick.dev/">squadrick.dev</a>'}
-            className="annotation-star"
+            className="annotation-star notes-intro-star"
           >
             {'✳\uFE0E'}
           </PeakTrigger>
@@ -91,12 +91,16 @@ export default function Notes() {
               </header>
             )}
 
-            {note.image && <NoteImage src={note.image} title={note.title} />}
+            {note.image && <NoteImage src={note.image} alt={note.imageAlt} />}
 
             {note.subimages && (
               <div className="note-subimages">
-                {note.subimages.map(image => (
-                  <NoteImage src={image} title={note.title} key={image} />
+                {note.subimages.map((image, imageIndex) => (
+                  <NoteImage
+                    src={image}
+                    alt={note.subimageAlts?.[imageIndex] || note.imageAlt}
+                    key={image}
+                  />
                 ))}
               </div>
             )}

@@ -13,20 +13,58 @@ const NAME = [
 
 const INTERESTS = [
   'computer architecture and programming',
-  { word: 'music', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Beatles_Abbey_Road_album_cover.jpg' },
-  { word: 'reading', img: 'https://m.media-amazon.com/images/I/719g0hOCp8L._SL1500_.jpg' },
-  { word: 'movies', img: 'https://m.media-amazon.com/images/M/MV5BYTg0OTcwYzItOTdhYi00MDA2LTk0NmUtMzA5M2E5NmU5ODM4XkEyXkFqcGc@._V1_.jpg' },
-  { word: 'video games', img: 'https://upload.wikimedia.org/wikipedia/en/4/46/Tux_Racer_cover.png' },
-  { word: 'tennis', img: 'https://i1.sndcdn.com/artworks-hHQ3FmyEB9bIO2qJ-MataYA-t500x500.jpg' },
-  { word: 'astronomy', img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg' },
-  { word: 'cars', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Porsche_911E_ca_1969.jpg' },
-  { word: 'planes', img: 'https://wallpapercave.com/wp/fPkmoiS.jpg' },
+  {
+    word: 'music',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Beatles_Abbey_Road_album_cover.jpg',
+    imgAlt: 'The Beatles Abbey Road album cover',
+  },
+  {
+    word: 'reading',
+    img: 'https://m.media-amazon.com/images/I/719g0hOCp8L._SL1500_.jpg',
+    imgAlt: 'I Wonder Why Stars Twinkle and Other Questions About Space book cover',
+  },
+  {
+    word: 'movies',
+    img: 'https://m.media-amazon.com/images/M/MV5BYTg0OTcwYzItOTdhYi00MDA2LTk0NmUtMzA5M2E5NmU5ODM4XkEyXkFqcGc@._V1_.jpg',
+    imgAlt: 'A collage of science fiction space scenes from Interstellar',
+  },
+  {
+    word: 'video games',
+    img: 'https://upload.wikimedia.org/wikipedia/en/4/46/Tux_Racer_cover.png',
+    imgAlt: 'Tux Racer video game cover',
+  },
+  {
+    word: 'tennis',
+    img: 'https://i1.sndcdn.com/artworks-hHQ3FmyEB9bIO2qJ-MataYA-t500x500.jpg',
+    imgAlt: 'Wii Sports tennis match on a grass court',
+  },
+  {
+    word: 'astronomy',
+    img: 'https://upload.wikimedia.org/wikipedia/en/e/ec/Cosmos_-_A_Personal_Voyage_%28title_card%29.jpg',
+    imgAlt: 'Cosmos: A Personal Voyage title card',
+  },
+  {
+    word: 'cars',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Porsche_911E_ca_1969.jpg',
+    imgAlt: 'Silver 1969 Porsche 911E parked outdoors',
+  },
+  {
+    word: 'planes',
+    img: 'https://wallpapercave.com/wp/fPkmoiS.jpg',
+    imgAlt: 'A B-2 Spirit stealth bomber flying with two F-22 fighter jets',
+  },
   {
     word: 'walking',
     tip: 'Underrated. Solves most problems. But only if you have them sketched well in your head. My girlfriend and mom were right — though I forget this every fortnight and rediscover it from first principles.',
     img: 'https://c.tenor.com/N4CS9Sjw_1IAAAAd/tenor.gif',
+    imgAlt: 'A looping animation of someone walking with determined energy',
   },
-  { word: 'sleeping', tip: "8 hours minimum or I'm not responsible for my code. ¯\\_(ツ)_/¯", img: 'https://imgs.xkcd.com/comics/cant_sleep.png' },
+  {
+    word: 'sleeping',
+    tip: "8 hours minimum or I'm not responsible for my code. ¯\\_(ツ)_/¯",
+    img: 'https://imgs.xkcd.com/comics/cant_sleep.png',
+    imgAlt: 'xkcd comic Cant Sleep about late-night thoughts',
+  },
 ]
 
 const underlined = {
@@ -70,7 +108,7 @@ export default function Home() {
           if (typeof item === 'object' && (item.tip || item.img)) {
             return (
               <span key={word}>
-                <PeakTrigger text={item.tip || ''} img={item.img} style={underlined}>{word}</PeakTrigger>
+                <PeakTrigger text={item.tip || ''} img={item.img} imgAlt={item.imgAlt} style={underlined}>{word}</PeakTrigger>
                 {suffix}
               </span>
             )

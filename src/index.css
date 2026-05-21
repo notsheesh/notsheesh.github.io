@@ -86,6 +86,10 @@ section { scroll-margin-top: 24px; }
   margin-bottom: 30px;
 }
 
+.notes-intro-star {
+  color: inherit;
+}
+
 .notes-list {
   display: flex;
   flex-direction: column;
