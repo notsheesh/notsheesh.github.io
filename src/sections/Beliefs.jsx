@@ -1,9 +1,9 @@
 import { PeakTrigger } from '../components/Peak'
 
-const GOVIND_TIP = 'Govind<br><a rel="external noopener noreferrer" target="_blank" href="https://x.com/DeepknowledgeU">x.com/DeepknowledgeU</a>'
+const GOVIND_TIP = 'Govind'
+const PHIL_DUNPHY_TIP = 'Phil Dunphy'
 
 const BELIEFS = [
-  'Every cycle counts and very little matters.',
   'Everything is made up and there are no prerequisites.',
   'Tools are meant to be mastered, not worshipped.',
   <>
@@ -12,7 +12,12 @@ const BELIEFS = [
       {'✳\uFE0E'}
     </PeakTrigger>
   </>,
-  <>Simple rules result in complex, intelligent behavior<br />And complex rules result in simple, stupid behavior.</>,
+  <>
+    Slow is smooth, smooth is fast.
+    <PeakTrigger text={PHIL_DUNPHY_TIP} className="annotation-star">
+      {'✳\uFE0E'}
+    </PeakTrigger>
+  </>,
   'You can do more than you think. The laws of physics are the only limit.',
   'In the end, people are everything.',
 ]

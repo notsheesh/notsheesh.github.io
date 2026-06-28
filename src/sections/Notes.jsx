@@ -56,16 +56,6 @@ function NoteImage({ src, alt }) {
   )
 }
 
-function NoteSeparator() {
-  return (
-    <div className="note-separator" aria-hidden="true">
-      <span>*</span>
-      <span>*</span>
-      <span>*</span>
-    </div>
-  )
-}
-
 export default function Notes() {
   return (
     <section id="notes" className="notes-section">
@@ -83,7 +73,7 @@ export default function Notes() {
       </p>
 
       <div className="notes-list">
-        {notes.map((note, index) => (
+        {notes.map((note) => (
           <article className="note-post" id={`note-${note.id}`} key={note.id}>
             {note.title && (
               <header className="note-header">
@@ -106,7 +96,6 @@ export default function Notes() {
             )}
 
             <Markdown source={note.content} />
-            {index < notes.length - 1 && <NoteSeparator />}
           </article>
         ))}
       </div>

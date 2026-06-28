@@ -100,25 +100,7 @@ section { scroll-margin-top: 24px; }
 }
 
 .note-post + .note-post {
-  margin-top: 0;
-}
-
-.note-separator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.72em;
-  margin: 1.55rem 0 1.9rem;
-  color: var(--text);
-  font-family: var(--site-font);
-  font-size: 1.02rem;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 0.92;
-}
-
-.note-separator span {
-  display: block;
+  margin-top: 2.75rem;
 }
 
 .note-header {
