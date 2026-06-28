@@ -120,7 +120,7 @@ export default function Home() {
       <p style={{ marginTop: 14 }}>
         Hopefully, there will be time for everything.
         <PeakTrigger
-          text={'Gokul P<br><a rel="external noopener noreferrer" target="_blank" href="https://gokulp01.github.io/">gokulp01.github.io</a>'}
+          text="Gokul P"
           className="annotation-star"
         >
           {'✳\uFE0E'}
