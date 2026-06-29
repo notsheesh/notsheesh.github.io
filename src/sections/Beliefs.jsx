@@ -2,6 +2,7 @@ import { PeakTrigger } from '../components/Peak'
 
 const GOVIND_TIP = 'Govind'
 const PHIL_DUNPHY_TIP = 'Phil Dunphy'
+const SUKEERTHI_TIP = 'Sukeerthi'
 
 const BELIEFS = [
   'Everything is made up and there are no prerequisites.',
@@ -9,17 +10,22 @@ const BELIEFS = [
   <>
     Learning comes from doing, not reading, watching, listening or thinking.
     <PeakTrigger text={GOVIND_TIP} className="annotation-star">
-      {'✳\uFE0E'}
+      {'\u2733\uFE0E'}
     </PeakTrigger>
   </>,
   <>
     Slow is smooth, smooth is fast.
     <PeakTrigger text={PHIL_DUNPHY_TIP} className="annotation-star">
-      {'✳\uFE0E'}
+      {'\u2733\uFE0E'}
     </PeakTrigger>
   </>,
   'You can do more than you think. The laws of physics are the only limit.',
-  'In the end, people are everything.',
+  <>
+    {'In the ' + 'end, people are everything.'}
+    <PeakTrigger text={SUKEERTHI_TIP} className="annotation-star">
+      {'\u2733\uFE0E'}
+    </PeakTrigger>
+  </>,
 ]
 
 export default function Beliefs() {
@@ -31,7 +37,7 @@ export default function Beliefs() {
       <ul style={{ paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
         {BELIEFS.map((b, i) => (
           <li key={i} style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '0.5em', color: 'var(--text)' }}>
-            <span style={{ color: 'var(--muted)', fontWeight: 700 }}>{'✳\uFE0E'}</span>
+            <span style={{ color: 'var(--muted)', fontWeight: 700 }}>{'\u2733\uFE0E'}</span>
             <span>{b}</span>
           </li>
         ))}
