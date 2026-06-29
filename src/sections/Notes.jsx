@@ -1,46 +1,12 @@
-import { marked } from 'marked'
 import { PeakTrigger } from '../components/Peak'
+import { notes } from '../data/notes'
 
-const noteModules = import.meta.glob('../notes/*.md', { eager: true })
-
-const renderer = new marked.Renderer()
-
-renderer.link = (href, title, text) => {
-  let out = `<a rel="external" href="${encodeURI(href)}" class="link"`
-  if (title) out += ` title="${escapeAttribute(title)}"`
-  out += `>${text}</a>`
-  return out
-}
-
-const notes = Object.entries(noteModules)
-  .map(([path, module]) => {
-    const data = module.default || module
-    return {
-      id: path.match(/\/([^/]+)\.md$/)?.[1] || path,
-      ...data,
-    }
-  })
-  .sort((a, b) => {
-    const dateA = a.date ? new Date(a.date).getTime() : 0
-    const dateB = b.date ? new Date(b.date).getTime() : 0
-    return dateB - dateA
-  })
-
-function escapeAttribute(value) {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-}
-
-function Markdown({ source }) {
-  const html = marked.parse(source || '', {
-    smartLists: true,
-    smartypants: true,
-    renderer,
-  })
-
-  return <div className="md-output" dangerouslySetInnerHTML={{ __html: html }} />
+function NoteContent({ children }) {
+  return (
+    <div className="note-content">
+      {typeof children === 'string' ? <p>{children}</p> : children}
+    </div>
+  )
 }
 
 function NoteImage({ src, alt }) {
@@ -74,7 +40,7 @@ export default function Notes() {
         <em>
           Things I want to remember ∩ Things I don't mind the internet knowing
           <PeakTrigger
-            text={'<a rel="external noopener noreferrer" target="_blank" href="https://squadrick.dev/">squadrick.dev</a>'}
+            text="Squadrick"
             className="annotation-star notes-intro-star"
           >
             {'✳\uFE0E'}
@@ -105,7 +71,7 @@ export default function Notes() {
               </div>
             )}
 
-            <Markdown source={note.content} />
+            <NoteContent>{note.content}</NoteContent>
             {index < notes.length - 1 && <NoteSeparator />}
           </article>
         ))}

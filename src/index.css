@@ -167,33 +167,33 @@ section { scroll-margin-top: 24px; }
   object-fit: cover;
 }
 
-.md-output p {
+.note-content p {
   margin-bottom: 1rem;
 }
 
-.md-output p:last-child {
+.note-content p:last-child {
   margin-bottom: 0;
 }
 
-.md-output strong {
+.note-content strong {
   font-weight: 600;
 }
 
-.md-output code {
+.note-content code {
   font-size: 95%;
 }
 
-.md-output ul {
+.note-content ul {
   list-style: disc;
   padding-left: 1.4rem;
   margin-bottom: 1rem;
 }
 
-.md-output li {
+.note-content li {
   margin-bottom: 0.25rem;
 }
 
-.md-output blockquote {
+.note-content blockquote {
   border-left: 2px solid var(--line);
   margin: 1rem 0;
   padding-left: 1rem;
