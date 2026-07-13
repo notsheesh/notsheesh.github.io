@@ -1,6 +1,8 @@
 const note = (id, date, content, details = {}) => ({ id, date, content, ...details })
 
 export const notes = [
+  note('new-idea', '2026-07-12', '“There is no such thing as a new idea. It is impossible. We simply take a lot of old ideas and put them into a sort of mental kaleidoscope. We give them a turn and they make new and curious combinations. We keep on turning and making new combinations indefinitely; but they are the same old pieces of colored glass that have been in use through all the ages.” — Mark Twain'),
+  note('courage', '2026-07-12', '“Courage is not the absence of fear, but rather the judgment that something else is more important than fear. The brave may not live forever, but the cautious do not live at all.” — Prince Philippe Renaldi'),
   note('sample-the-world', '2026-06-28', '“You can sample the world or you can live in it.” — Simon Sarris'),
   note('simple-rules', '2026-06-28', '“Simple, clear purpose and principles give rise to complex, intelligent behavior. Complex rules and regulations give rise to simple, stupid behavior.” — Dee Hock'),
   note('valuable-education', '2026-06-28', '“The most valuable of all education is the ability to make yourself do the thing you have to do, when it has to be done, whether you like it or not.” — Aldous Huxley'),
