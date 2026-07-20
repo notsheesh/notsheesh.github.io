@@ -91,33 +91,25 @@ const hl = (place) => ({
 export default function Home() {
   return (
     <section id="about">
-      <h1 style={{
-        fontSize: '1.55rem',
-        fontWeight: 400,
-        letterSpacing: '0.01em',
-        color: 'var(--text)',
-        lineHeight: 1,
-        marginBottom: '36px',
-      }}>
-        {NAME.map(({ word, tip }, i) => (
-          <span key={word}>
-            <PeakTrigger text={tip} style={{ borderBottom: '1px solid var(--muted)', cursor: 'pointer' }}>
-              {word}
-            </PeakTrigger>
-            {i < NAME.length - 1 && ' '}
-          </span>
-        ))}
-      </h1>
-
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <p>Hi, I'm Shreesh.</p>
+        <h1 style={{ fontSize: '1rem', fontWeight: 400, lineHeight: 'inherit', color: 'var(--text)' }}>
+          Hello, I'm{' '}
+          {NAME.map(({ word, tip }, i) => (
+            <span key={word}>
+              <PeakTrigger text={tip} style={{ borderBottom: '1px solid var(--muted)', cursor: 'pointer' }}>
+                {word}
+              </PeakTrigger>
+              {i < NAME.length - 1 && ' '}
+            </span>
+          ))}
+        </h1>
 
         <p>
           I love computer architecture and programming. I work on end to end fullchip vmod verif for Rubin and Feynman with a focus on memory systems at{' '}
           <span style={hl('nvidia')}>NVIDIA</span>.
         </p>
 
-        <p>
+        <p style={{ marginTop: 14 }}>
           I started formally training in computers at{' '}
           <span style={hl('manipal')}>Manipal Institute of Technology</span>,
           in Manipal — a small beach town on India's west coast.
@@ -162,7 +154,7 @@ export default function Home() {
           California is nice and warm, reminds me of Manipal, except the traffic and taxes.
         </p>
 
-        <p>
+        <p style={{ marginTop: 14 }}>
           Besides computers, I love{' '}
           {INTERESTS.slice(1).map((item, i) => {
             const rest = INTERESTS.slice(1)

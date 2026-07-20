@@ -6,7 +6,7 @@
   --muted: #8a7a6a;
   --line:  #d4c9b0;
   --link:  #1a4a8a;
-  --hl:    #ffe98a;
+  --hl:    #ffe066;
   --font-serif: "IM Fell English", Georgia, "Times New Roman", serif;
   --font-sans: Arial, Helvetica, system-ui, sans-serif;
   --serif-font-size: clamp(17px, 1.48vw, 23px);
@@ -21,6 +21,13 @@
   background: var(--bg);
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+  background-color: var(--bg);
+}
+
 .font-serif-mode {
   --site-font: var(--font-serif);
   --site-font-size: var(--serif-font-size);
@@ -32,26 +39,23 @@
 }
 
 .dark {
-  --bg:    #1c1814;
+  --bg:    #000000;
   --text:  #e8dcc8;
   --muted: #9a8a78;
   --line:  #3a3028;
   --link:  #7aaddb;
-  --hl:    #5a4010;
+  --hl:    #ffe066;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    --bg:    #1c1814;
-    --text:  #e8dcc8;
-    --muted: #9a8a78;
-    --line:  #3a3028;
-    --link:  #7aaddb;
-    --hl:    #5a4010;
-  }
+::selection {
+  color: #1c1814;
+  background: var(--hl);
 }
 
-::selection { background: var(--hl); }
+::-moz-selection {
+  color: #1c1814;
+  background: var(--hl);
+}
 
 a { color: var(--link); text-underline-offset: 0.15em; }
 
@@ -208,7 +212,7 @@ section { scroll-margin-top: 24px; }
 .sidebar {
   width: 200px;
   flex-shrink: 0;
-  padding: 110px 36px 72px 80px;
+  padding: 36px 36px 72px 80px;
   position: sticky;
   top: 0;
   height: 100vh;
