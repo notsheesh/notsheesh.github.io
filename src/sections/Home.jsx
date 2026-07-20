@@ -73,9 +73,24 @@ const underlined = {
   textDecorationThickness: '1px',
 }
 
+const HL = {
+  manipal: { color: '#8B1A1A' },
+  rit:     { color: '#F76902' },
+  cmu:     { color: '#c41230' },
+  nvidia:  { color: '#76b900' },
+}
+
+const hl = (place) => ({
+  fontWeight: 700,
+  textDecoration: 'underline',
+  textUnderlineOffset: '0.18em',
+  textDecorationThickness: '1px',
+  ...HL[place],
+})
+
 export default function Home() {
   return (
-    <>
+    <section id="about">
       <h1 style={{
         fontSize: '1.55rem',
         fontWeight: 400,
@@ -94,38 +109,90 @@ export default function Home() {
         ))}
       </h1>
 
-      <p>Hi, I'm Shreesh.</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <p>Hi, I'm Shreesh.</p>
 
-      <p style={{ marginTop: 14 }}>
-        I love computer architecture and programming. I also love{' '}
-        {INTERESTS.slice(1).map((item, i) => {
-          const rest = INTERESTS.slice(1)
-          const isLast = i === rest.length - 1
-          const isSecondLast = i === rest.length - 2
-          const word = typeof item === 'string' ? item : item.word
-          const suffix = isLast ? '.' : isSecondLast ? ' and ' : ', '
+        <p>
+          I love computer architecture and programming. I work on end to end fullchip vmod verif for Rubin and Feynman with a focus on memory systems at{' '}
+          <span style={hl('nvidia')}>NVIDIA</span>.
+        </p>
 
-          if (typeof item === 'object' && (item.tip || item.img)) {
-            return (
-              <span key={word}>
-                <PeakTrigger text={item.tip || ''} img={item.img} imgAlt={item.imgAlt} style={underlined}>{word}</PeakTrigger>
-                {suffix}
-              </span>
-            )
-          }
-          return <span key={word}>{word}{suffix}</span>
-        })}
-      </p>
+        <p>
+          I started formally training in computers at{' '}
+          <span style={hl('manipal')}>Manipal Institute of Technology</span>,
+          in Manipal — a small beach town on India's west coast.
+        </p>
 
-      <p style={{ marginTop: 14 }}>
-        Hopefully, there will be time for everything.
-        <PeakTrigger
-          text="Gokul P"
-          className="annotation-star"
-        >
-          {'✳\uFE0E'}
-        </PeakTrigger>
-      </p>
-    </>
+        <p>
+          After graduating with a B.Tech. in Electronics and Communication Engineering,
+          I moved to Bangalore and spent about a year shuffling between engineering, product and research — still not sure what I was doing, but it was fun.
+          And then I went on to spend a semester taking graduate classes in theoretical computer science at{' '}
+          <span style={hl('rit')}>Rochester Institute of Technology</span>.
+        </p>
+
+        <p>
+          Rochester was cold so I transferred out to{' '}
+          <span style={hl('cmu')}>Carnegie Mellon University</span>{' '}
+          to pursue an M.S. in Electrical and Computer Engineering.
+          At CMU, I worked with Professor John Paul Shen and his PhD student Prabhu Vellaisamy
+          at the{' '}
+          <PeakTrigger
+            text="Profiling gemm kernels because there's no free launch*"
+            iframe="https://arxiv.org/html/2603.12465v1"
+            style={underlined}
+          >
+            NeuroAI Computer Architecture Lab
+          </PeakTrigger>
+          {' '}
+          <a href="https://arxiv.org/abs/2603.12465" target="_blank" rel="noreferrer" style={{ fontSize: '0.75em', verticalAlign: 'super', color: 'var(--muted)' }}>[arxiv]</a>
+          {' '}while TAing his flagship course —{' '}
+          <PeakTrigger
+            text=""
+            img="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1347382081i/2913411.jpg"
+            imgAlt="Computer Architecture: A Quantitative Approach book cover"
+            style={underlined}
+          >
+            18740 Modern Computer Architecture
+          </PeakTrigger>.
+        </p>
+
+        <p>
+          Pittsburgh wasn't any better, and worse yet, it was windy.
+          So I moved to arguably the better coast.
+          California is nice and warm, reminds me of Manipal, except the traffic and taxes.
+        </p>
+
+        <p>
+          Besides computers, I love{' '}
+          {INTERESTS.slice(1).map((item, i) => {
+            const rest = INTERESTS.slice(1)
+            const isLast = i === rest.length - 1
+            const isSecondLast = i === rest.length - 2
+            const word = typeof item === 'string' ? item : item.word
+            const suffix = isLast ? '.' : isSecondLast ? ' and ' : ', '
+
+            if (typeof item === 'object' && (item.tip || item.img)) {
+              return (
+                <span key={word}>
+                  <PeakTrigger text={item.tip || ''} img={item.img} imgAlt={item.imgAlt} style={underlined}>{word}</PeakTrigger>
+                  {suffix}
+                </span>
+              )
+            }
+            return <span key={word}>{word}{suffix}</span>
+          })}
+        </p>
+
+        <p>
+          Hopefully, there will be time for everything.
+          <PeakTrigger
+            text="Gokul P"
+            className="annotation-star"
+          >
+            {'✳\uFE0E'}
+          </PeakTrigger>
+        </p>
+      </div>
+    </section>
   )
 }
