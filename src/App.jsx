@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar'
 import Home from './sections/Home'
 import Beliefs from './sections/Beliefs'
 import Notes from './sections/Notes'
-import ThenAndNow from './sections/ThenAndNow'
 
 export default function App() {
   return (
@@ -15,8 +14,6 @@ export default function App() {
           <Home />
           <hr style={{ border: 'none', borderTop: '1px solid var(--line)', margin: '48px 0' }} />
           <Beliefs />
-          <hr style={{ border: 'none', borderTop: '1px solid var(--line)', margin: '48px 0' }} />
-          <ThenAndNow />
           <hr style={{ border: 'none', borderTop: '1px solid var(--line)', margin: '48px 0' }} />
           <Notes />
         </main>

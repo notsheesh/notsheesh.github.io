@@ -34,10 +34,8 @@ function useFontMode() {
 }
 
 const NAV = [
-  { href: '#',          label: 'Home' },
+  { href: '#about',     label: 'About' },
   { href: '#beliefs',   label: 'Beliefs' },
-  { href: '#then',      label: 'Then' },
-  { href: '#now',       label: 'Now' },
   { href: '#notes',     label: 'Notes' },
   // { href: '#pieces',    label: 'Jigsaw Pieces' },
   // { href: '#notebook',  label: 'Notebook' },
@@ -45,14 +43,14 @@ const NAV = [
 ]
 
 export default function Sidebar() {
-  const [active, setActive] = useState('')
+  const [active, setActive] = useState('about')
   const [open, setOpen] = useState(false)
   const [dark, setDark] = useDarkMode()
   const [serif, setSerif] = useFontMode()
 
   useEffect(() => {
     const updateActive = () => {
-      let current = ''
+      let current = 'about'
       document.querySelectorAll('section[id]').forEach(s => {
         if (s.getBoundingClientRect().top <= 60) current = s.id
       })
