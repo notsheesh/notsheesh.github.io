@@ -118,12 +118,11 @@ export default function Sidebar() {
         {open ? '✕' : '☰'}
       </button>
 
-      {open && (
-        <div
-          onClick={() => setOpen(false)}
-          style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.25)', zIndex: 200 }}
-        />
-      )}
+      <div
+        className={`sidebar-backdrop${open ? ' open' : ''}`}
+        onClick={() => setOpen(false)}
+        aria-hidden={!open}
+      />
 
       <nav className={`sidebar${open ? ' open' : ''}`}>
         <div className="sidebar-controls">

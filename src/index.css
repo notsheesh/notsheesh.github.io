@@ -271,11 +271,17 @@ section { scroll-margin-top: 24px; }
   height: 36px;
   align-items: center;
   justify-content: center;
-  background: var(--bg);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 0;
+  padding: 0;
   cursor: pointer;
   font-size: 1.1rem;
   color: var(--muted);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar-backdrop {
+  display: none;
 }
 
 /* --- Mobile --- */
@@ -291,15 +297,61 @@ section { scroll-margin-top: 24px; }
     width: 220px;
     height: 100vh;
     padding: 72px 32px 40px 32px;
-    background: var(--bg);
-    border-right: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 calc(100% - 48px),
+      rgba(0, 0, 0, 0.98) calc(100% - 42px),
+      rgba(0, 0, 0, 0.92) calc(100% - 36px),
+      rgba(0, 0, 0, 0.8) calc(100% - 30px),
+      rgba(0, 0, 0, 0.64) calc(100% - 24px),
+      rgba(0, 0, 0, 0.46) calc(100% - 18px),
+      rgba(0, 0, 0, 0.28) calc(100% - 12px),
+      rgba(0, 0, 0, 0.12) calc(100% - 6px),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 calc(100% - 48px),
+      rgba(0, 0, 0, 0.98) calc(100% - 42px),
+      rgba(0, 0, 0, 0.92) calc(100% - 36px),
+      rgba(0, 0, 0, 0.8) calc(100% - 30px),
+      rgba(0, 0, 0, 0.64) calc(100% - 24px),
+      rgba(0, 0, 0, 0.46) calc(100% - 18px),
+      rgba(0, 0, 0, 0.28) calc(100% - 12px),
+      rgba(0, 0, 0, 0.12) calc(100% - 6px),
+      transparent 100%
+    );
     transform: translateX(-100%);
-    transition: transform 0.25s ease;
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 300;
   }
 
   .sidebar.open {
     transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(28, 24, 20, 0.16);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.32s ease;
+  }
+
+  .sidebar-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .main-content {
