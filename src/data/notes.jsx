@@ -1,6 +1,8 @@
 const note = (id, date, content, details = {}) => ({ id, date, content, ...details })
 
 export const notes = [
+  note('curiosity', '2026-07-21', '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” -- Aaron Swartz'),
+  note('gpu', '2026-07-21', '“If you start thinking like a GPU, maybe the GPU will start thinking like you.” -- Jerry Tworek'),
   note('new-idea', '2026-07-12', '“There is no such thing as a new idea. It is impossible. We simply take a lot of old ideas and put them into a sort of mental kaleidoscope. We give them a turn and they make new and curious combinations. We keep on turning and making new combinations indefinitely; but they are the same old pieces of colored glass that have been in use through all the ages.” — Mark Twain'),
   note('courage', '2026-07-12', '“Courage is not the absence of fear, but rather the judgment that something else is more important than fear. The brave may not live forever, but the cautious do not live at all.” — Prince Philippe Renaldi'),
   note('imagination', '2026-07-01', '“Imagination is more important than knowledge.” — Albert Einstein, On Science, 1930s'),
