@@ -1,6 +1,8 @@
 const note = (id, date, content, details = {}) => ({ id, date, content, ...details })
 
 export const notes = [
+  note('something-will-be-left-behind', '2026-08-09', '“जितना भी ट्राय करो, बन्नी, लाइफ़ में कुछ न कुछ तो छूटेगा ही। तो जहाँ हैं, वहीं का मज़ा लेते हैं ना।” — नैना तलवार, YJHD (2013)'),
+  note('presence-and-absence', '2026-08-09', '“हम पर किसी के होने का असर उतना ही होता है, जितना न होने का।” — Musafir Cafe, Netflix (2026)'),
   note('curiosity', '2026-07-21', '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” -- Aaron Swartz'),
   note('gpu', '2026-07-21', '“If you start thinking like a GPU, maybe the GPU will start thinking like you.” -- Jerry Tworek'),
   note('new-idea', '2026-07-12', '“There is no such thing as a new idea. It is impossible. We simply take a lot of old ideas and put them into a sort of mental kaleidoscope. We give them a turn and they make new and curious combinations. We keep on turning and making new combinations indefinitely; but they are the same old pieces of colored glass that have been in use through all the ages.” — Mark Twain'),
