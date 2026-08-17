@@ -1,6 +1,7 @@
 const note = (id, date, content, details = {}) => ({ id, date, content, ...details })
 
 export const notes = [
+  note('racing-driver', '2026-08-17', '“If you no longer go for a gap which exists, you are no longer a racing driver.” — Ayrton Senna'),
   note('something-will-be-left-behind', '2026-08-09', '“जितना भी ट्राय करो, बन्नी, लाइफ़ में कुछ न कुछ तो छूटेगा ही। तो जहाँ हैं, वहीं का मज़ा लेते हैं ना।” — नैना तलवार, YJHD (2013)'),
   note('presence-and-absence', '2026-08-09', '“हम पर किसी के होने का असर उतना ही होता है, जितना न होने का।” — Musafir Cafe, Netflix (2026)'),
   note('curiosity', '2026-07-21', '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” -- Aaron Swartz'),
