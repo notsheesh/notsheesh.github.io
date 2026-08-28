@@ -26,6 +26,7 @@ const BELIEFS = [
       {'\u2733\uFE0E'}
     </PeakTrigger>
   </>,
+  'Know what’s true and do what’s right.',
 ]
 
 export default function Beliefs() {
