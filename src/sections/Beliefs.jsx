@@ -4,6 +4,7 @@ const GOVIND_TIP = 'Govind'
 const SUKEERTHI_TIP = 'Sukeerthi'
 
 const BELIEFS = [
+  'Every cycle counts and very little matters.',
   'Everything is made up and there are no prerequisites.',
   <>
     Learning comes from doing, not reading, watching, listening or thinking.
@@ -13,7 +14,6 @@ const BELIEFS = [
   </>,
   'You can do more than you think. The laws of physics are the only limit.',
   'Know what’s true and do what’s right.',
-  'Every cycle counts and very little matters.',
   <>
     {'In the ' + 'end, people are everything.'}
     <PeakTrigger text={SUKEERTHI_TIP} className="annotation-star">
