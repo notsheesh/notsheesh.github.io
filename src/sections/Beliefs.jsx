@@ -5,7 +5,6 @@ const SUKEERTHI_TIP = 'Sukeerthi'
 
 const BELIEFS = [
   'Everything is made up and there are no prerequisites.',
-  'Tools are meant to be mastered, not worshipped.',
   <>
     Learning comes from doing, not reading, watching, listening or thinking.
     <PeakTrigger text={GOVIND_TIP} className="annotation-star">
