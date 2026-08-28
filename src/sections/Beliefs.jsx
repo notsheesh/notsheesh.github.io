@@ -27,6 +27,7 @@ const BELIEFS = [
     </PeakTrigger>
   </>,
   'Know what’s true and do what’s right.',
+  'Every cycle counts and very little matters.',
 ]
 
 export default function Beliefs() {
