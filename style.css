@@ -19,7 +19,7 @@ h2 + * { margin-top: 0; }
 .nvidia  { color: #76b900; }
 
 [data-tip], [data-img] { cursor: pointer; border-bottom: 1px dotted #000; }
-.star { border: none; color: #777; font-size: 1.1em; margin-left: 1px; line-height: 0; }
+.star { border: none; text-decoration: none; color: #777; font-size: 1.1em; margin-left: 1px; line-height: 0; }
 
 #tip {
   position: absolute;
