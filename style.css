@@ -1,0 +1,41 @@
+body {
+  max-width: 42em;
+  margin: 2em 1em 4em;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+  background: #fff;
+}
+
+h1 { font-size: 1.6em; font-weight: normal; margin: 0 0 0.6em; }
+h2 { font-size: 1.15em; margin: 1.6em 0 0.5em; }
+h3 { font-size: 1em; margin: 0 0 0.3em; }
+hr { border: none; border-top: 1px solid #999; margin: 1.6em 0; }
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+
+.manipal { color: #8b1a1a; }
+.rit     { color: #f76902; }
+.cmu     { color: #c41230; }
+.nvidia  { color: #76b900; }
+
+[data-tip] { cursor: pointer; border-bottom: 1px dotted #000; }
+.star { border: none; color: #777; font-size: 0.8em; vertical-align: super; }
+
+#tip {
+  position: absolute;
+  max-width: min(26em, calc(100vw - 2em));
+  padding: 0.4em 0.6em;
+  background: #ffffcc;
+  border: 1px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  font-size: 0.85em;
+  display: none;
+  z-index: 10;
+}
+
+.note { margin: 0 0 1.2em; }
+.note .date { color: #777; font-size: 0.85em; }
+.note p, .note ul { margin: 0.2em 0; }
