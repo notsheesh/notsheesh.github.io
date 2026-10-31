@@ -28,3 +28,4 @@ jobs:
           branch: gh-pages
           folder: dist
           single-commit: true
+          commit-message: deploy ${{ github.sha }}
