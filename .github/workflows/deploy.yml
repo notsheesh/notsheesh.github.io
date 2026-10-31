@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: mkdir site && cp -r *.html *.css *.js assets site/
+      - run: mkdir site && cp -r *.html *.css *.js assets stream site/
 
       - uses: JamesIves/github-pages-deploy-action@4.1.8
         with:

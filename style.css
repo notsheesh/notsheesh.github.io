@@ -11,6 +11,7 @@ h1 { font-size: 1.5em; }
 h2 { font-size: 1.15em; margin-bottom: 0.2em; }
 p, ul { margin: 0.7em 0; }
 li ul { margin: 0; }
+code { word-break: break-all; }
 h2 + * { margin-top: 0; }
 
 .manipal { color: #8b1a1a; }
