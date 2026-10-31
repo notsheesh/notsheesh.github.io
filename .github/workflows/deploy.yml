@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: mkdir site && cp index.html notes.html style.css popup.js site/
+      - run: mkdir site && cp *.html *.css *.js site/
 
       - uses: JamesIves/github-pages-deploy-action@4.1.8
         with:
