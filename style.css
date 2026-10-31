@@ -3,19 +3,22 @@ body {
   font-size: 12px;
   margin-right: 30%;
   color: #000;
+  line-height: 1.4;
   background: #fff;
 }
 
 h1 { font-size: 1.5em; }
-h2 { font-size: 1.15em; }
-.home p { margin: 0; }
+h2 { font-size: 1.15em; margin-bottom: 0.2em; }
+p, ul { margin: 0.7em 0; }
+li ul { margin: 0; }
+h2 + * { margin-top: 0; }
 
 .manipal { color: #8b1a1a; }
 .rit     { color: #f76902; }
 .cmu     { color: #c41230; }
 .nvidia  { color: #76b900; }
 
-[data-tip] { cursor: pointer; border-bottom: 1px dotted #000; }
+[data-tip], [data-img] { cursor: pointer; border-bottom: 1px dotted #000; }
 .star { border: none; color: #777; font-size: 1.1em; margin-left: 1px; line-height: 0; }
 
 #tip {
@@ -28,16 +31,8 @@ h2 { font-size: 1.15em; }
   display: none;
   z-index: 10;
 }
-
-.note .date { display: none; }
-.note { display: list-item; list-style: disc; margin-left: 40px; }
-.note p, .note ul { margin: 0; }
-.note ul { padding-left: 40px; list-style: circle; }
-
-:lang(hi) { font-size: 1.05em; line-height: 1.5; }
+#tip.has-img { width: 260px; }
+#tip img { display: block; width: 100%; height: auto; margin-bottom: 0.3em; }
 
 @media (max-width: 700px) { body { margin-right: 8px; } }
 
-[data-img] { cursor: pointer; border-bottom: 1px dotted #000; }
-#tip.has-img { width: 260px; }
-#tip img { display: block; width: 100%; height: auto; margin-bottom: 0.3em; }
