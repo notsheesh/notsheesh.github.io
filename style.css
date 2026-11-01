@@ -95,3 +95,9 @@ a.star { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle__classic * { transition: none !important; }
 }
+
+/* Anchor the desktop toggle to the page edge, outside the text column. */
+@media (min-width: 701px) {
+  .page-header { min-height: 44px; }
+  .theme-toggle { position: absolute; top: 8px; right: 8px; }
+}
