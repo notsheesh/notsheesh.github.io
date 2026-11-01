@@ -1,0 +1,103 @@
+:root {
+  color-scheme: dark;
+  --background: #000;
+  --text: #ffb000;
+  --link: #ffd06a;
+  --visited: #e8ad55;
+  --muted: #c58b24;
+  --popup: #100b00;
+  --border: #ffb000;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #fff;
+  --text: #000;
+  --link: #0000ee;
+  --visited: #551a8b;
+  --muted: #777;
+  --popup: #ffffcc;
+  --border: #000;
+}
+html { background: var(--background); color: var(--text); }
+body {
+  font-family: Verdana, "Noto Sans Devanagari", Helvetica, sans-serif;
+  font-size: 12px;
+  margin-right: 25%;
+  color: var(--text);
+  line-height: 1.4;
+  background: var(--background);
+}
+
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.15em; margin-bottom: 0.2em; }
+p, ul { margin: 0.7em 0; }
+li ul { margin: 0; }
+code { word-break: break-all; }
+h2 + * { margin-top: 0; }
+
+.manipal { color: #8b1a1a; }
+.rit     { color: #f76902; }
+.cmu     { color: #c41230; }
+.nvidia  { color: #76b900; }
+
+[data-tip], [data-img] { cursor: pointer; border-bottom: 1px dotted currentColor; }
+.star { border: none; text-decoration: none; color: var(--muted); font-size: 1.1em; margin-left: 1px; line-height: 0; }
+
+#tip {
+  position: absolute;
+  max-width: min(30em, calc(100vw - 2em));
+  padding: 0.4em 0.6em;
+  background: var(--popup);
+  border: 1px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  display: none;
+  z-index: 10;
+}
+#tip.has-img { width: 260px; }
+#tip img { display: block; width: 100%; height: auto; margin-bottom: 0.3em; }
+
+
+@media (max-width: 700px) { body { margin-right: 8px; } }
+
+a { color: var(--link); }
+a:visited { color: var(--visited); }
+a.star { color: var(--muted); }
+:root:not([data-theme="light"]) :is(.manipal, .rit, .cmu, .nvidia) { color: var(--text); }
+
+.page-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.page-header > :is(h1, h2) { min-width: 0; }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+/* Classic sun/moon shape from Theme Toggles (toggles.dev), MIT. */
+.theme-toggle__classic { fill: currentColor; overflow: visible; }
+.theme-toggle__classic circle { transform-origin: center; transition: transform 400ms; }
+.theme-toggle__classic g > path { transform-origin: center; transition: transform 400ms, opacity 400ms; }
+.theme-toggle__classic clipPath path { transition: transform 400ms; }
+/* Show the action: sun in dark mode, moon in light mode. */
+[data-theme="light"] .theme-toggle__classic circle { transform: scale(1.7); }
+[data-theme="light"] .theme-toggle__classic g > path { transform: scale(0); opacity: 0; }
+[data-theme="light"] .theme-toggle__classic clipPath path { transform: translate(-12px, 2px); }
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle__classic * { transition: none !important; }
+}
+
+/* Anchor the desktop toggle to the page edge, outside the text column. */
+@media (min-width: 701px) {
+  .page-header { min-height: 44px; }
+  .theme-toggle { position: absolute; top: 8px; right: 8px; }
+}
